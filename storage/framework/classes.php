@@ -60,4 +60,13 @@
   'RainLab\\Builder\\Classes\\DatabaseTableSchemaCreator' => 'plugins\\rainlab\\builder\\classes\\DatabaseTableSchemaCreator.php',
   'RainLab\\Builder\\Classes\\TableMigrationCodeGenerator' => 'plugins\\rainlab\\builder\\classes\\TableMigrationCodeGenerator.php',
   'RainLab\\Builder\\Classes\\MigrationModel' => 'plugins\\rainlab\\builder\\classes\\MigrationModel.php',
+  'RainLab\\Builder\\Classes\\ModelFileParser' => 'plugins\\rainlab\\builder\\classes\\ModelFileParser.php',
+  'RainLab\\Builder\\Classes\\PhpSourceStream' => 'plugins\\rainlab\\builder\\classes\\PhpSourceStream.php',
+  'RainLab\\Builder\\Classes\\ModelYamlModel' => 'plugins\\rainlab\\builder\\classes\\ModelYamlModel.php',
+  'RainLab\\Builder\\Classes\\ModelFormModel' => 'plugins\\rainlab\\builder\\classes\\ModelFormModel.php',
+  'RainLab\\Builder\\Classes\\ModelListModel' => 'plugins\\rainlab\\builder\\classes\\ModelListModel.php',
+  'RainLab\\Builder\\Classes\\ControlLibrary' => 'plugins\\rainlab\\builder\\classes\\ControlLibrary.php',
+  'RainLab\\Builder\\Classes\\StandardControlsRegistry' => 'plugins\\rainlab\\builder\\classes\\StandardControlsRegistry.php',
+  'RainLab\\Builder\\Classes\\ControlDesignTimeProviderBase' => 'plugins\\rainlab\\builder\\classes\\ControlDesignTimeProviderBase.php',
+  'RainLab\\Builder\\Widgets\\DefaultControlDesignTimeProvider' => 'plugins\\rainlab\\builder\\widgets\\DefaultControlDesignTimeProvider.php',
 );

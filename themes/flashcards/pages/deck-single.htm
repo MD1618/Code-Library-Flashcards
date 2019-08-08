@@ -10,13 +10,17 @@ modelKeyColumn = "id"
 displayColumn = "name"
 notFoundMessage = "Record not found"
 ==
+{##}
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
 {% if record %}
-    {{ record.name|raw }}
-    {{ record.description|raw }}
+    <span style="font-size:25px;">
+        {{ record.name }}
+    </span>                    
+    <br>
+    {{ html_limit(record.description, 50)|raw }}
 {% else %}
     {{ notFoundMessage }}
 {% endif %}

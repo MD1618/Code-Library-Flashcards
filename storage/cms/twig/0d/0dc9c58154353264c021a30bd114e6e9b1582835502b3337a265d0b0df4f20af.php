@@ -31,28 +31,32 @@ class __TwigTemplate_719eaf2a64bc393121a49d82c9e31dde7997ba669ee15af2838bba74a55
 
     protected function doDisplay(array $context, array $blocks = [])
     {
-        // line 1
-        $context["record"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "record", [], "any", false, false, false, 1);
         // line 2
-        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "displayColumn", [], "any", false, false, false, 2);
+        $context["record"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "record", [], "any", false, false, false, 2);
         // line 3
-        $context["notFoundMessage"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "notFoundMessage", [], "any", false, false, false, 3);
+        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "displayColumn", [], "any", false, false, false, 3);
         // line 4
+        $context["notFoundMessage"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "notFoundMessage", [], "any", false, false, false, 4);
+        // line 5
         echo "
 ";
-        // line 5
+        // line 6
         if (($context["record"] ?? null)) {
-            // line 6
-            echo "    ";
-            echo twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "name", [], "any", false, false, false, 6);
-            echo "
-    ";
             // line 7
-            echo twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "description", [], "any", false, false, false, 7);
+            echo "    <span style=\"font-size:25px;\">
+                   ";
+            // line 8
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "name", [], "any", false, false, false, 8), "html", null, true);
+            echo "
+                </span>                    
+                    <br>
+                ";
+            // line 11
+            echo call_user_func_array($this->env->getFunction('html_limit')->getCallable(), ["limit", twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "description", [], "any", false, false, false, 11), 50]);
             echo "
 ";
         } else {
-            // line 9
+            // line 13
             echo "    ";
             echo twig_escape_filter($this->env, ($context["notFoundMessage"] ?? null), "html", null, true);
             echo "
@@ -72,18 +76,22 @@ class __TwigTemplate_719eaf2a64bc393121a49d82c9e31dde7997ba669ee15af2838bba74a55
 
     public function getDebugInfo()
     {
-        return array (  56 => 9,  51 => 7,  46 => 6,  44 => 5,  41 => 4,  39 => 3,  37 => 2,  35 => 1,);
+        return array (  60 => 13,  55 => 11,  49 => 8,  46 => 7,  44 => 6,  41 => 5,  39 => 4,  37 => 3,  35 => 2,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% set record = builderDetails.record %}
+        return new Source("{##}
+{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
 {% if record %}
-    {{ record.name|raw }}
-    {{ record.description|raw }}
+    <span style=\"font-size:25px;\">
+                   {{ record.name }}
+                </span>                    
+                    <br>
+                {{ html_limit(record.description, 50)|raw }}
 {% else %}
     {{ notFoundMessage }}
 {% endif %}", "C:\\xampp\\htdocs\\FlashCards/themes/flashcards/pages/deck-single.htm", "");

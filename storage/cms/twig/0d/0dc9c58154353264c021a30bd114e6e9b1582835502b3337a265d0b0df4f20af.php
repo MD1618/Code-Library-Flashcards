@@ -44,13 +44,13 @@ class __TwigTemplate_719eaf2a64bc393121a49d82c9e31dde7997ba669ee15af2838bba74a55
         if (($context["record"] ?? null)) {
             // line 7
             echo "    <span style=\"font-size:25px;\">
-                   ";
+        ";
             // line 8
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "name", [], "any", false, false, false, 8), "html", null, true);
             echo "
-                </span>                    
-                    <br>
-                ";
+    </span>                    
+    <br>
+    ";
             // line 11
             echo call_user_func_array($this->env->getFunction('html_limit')->getCallable(), ["limit", twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "description", [], "any", false, false, false, 11), 50]);
             echo "
@@ -88,10 +88,10 @@ class __TwigTemplate_719eaf2a64bc393121a49d82c9e31dde7997ba669ee15af2838bba74a55
 
 {% if record %}
     <span style=\"font-size:25px;\">
-                   {{ record.name }}
-                </span>                    
-                    <br>
-                {{ html_limit(record.description, 50)|raw }}
+        {{ record.name }}
+    </span>                    
+    <br>
+    {{ html_limit(record.description, 50)|raw }}
 {% else %}
     {{ notFoundMessage }}
 {% endif %}", "C:\\xampp\\htdocs\\FlashCards/themes/flashcards/pages/deck-single.htm", "");

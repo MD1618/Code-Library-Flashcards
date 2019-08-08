@@ -1,13 +1,11 @@
-1565252262a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1423:"description = "Default layout"
+1565252790a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1225:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>October CMS - {{ this.page.title }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="OctoberCMS">
+        <title>{{ this.page.title }}</title>
+       
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
@@ -41,14 +39,12 @@
 
     </body>
 </html>
-";s:5:"mtime";i:1565251636;s:6:"markup";s:1388:"<!DOCTYPE html>
+";s:5:"mtime";i:1565252070;s:6:"markup";s:1190:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>October CMS - {{ this.page.title }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="OctoberCMS">
+        <title>{{ this.page.title }}</title>
+       
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">

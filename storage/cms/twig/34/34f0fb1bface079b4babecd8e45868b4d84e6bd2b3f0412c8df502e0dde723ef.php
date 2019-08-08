@@ -31,15 +31,15 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
 
     protected function doDisplay(array $context, array $blocks = [])
     {
-        // line 1
+        // line 2
         echo "<div class=\"jumbotron\">
     <div class=\"container\">
         ";
-        // line 3
+        // line 4
         $context['__cms_content_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->contentFunction("welcome.htm"        , $context['__cms_content_params']        );
         unset($context['__cms_content_params']);
-        // line 4
+        // line 5
         echo "    </div>
 </div>
 
@@ -77,7 +77,7 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
         Pages are rendered inside layouts with this function that should be called in the layout code:
     </p>
     <pre>";
-        // line 40
+        // line 41
         echo "{% page %}";
         echo "</pre>
     <p>Using a layout for pages is optional &mdash; you can define everything right in the page file.</p>
@@ -94,12 +94,12 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
         Partials are rendered with:
     </p>
     <pre>";
-        // line 54
+        // line 55
         echo "{% partial \"partial-name\" %}";
         echo "</pre>
     <p>You may place partials inside folders too. In this example we placed the footer content to the <code>partials/site/footer.htm</code> partial.</p>
     <pre>";
-        // line 56
+        // line 57
         echo "{% partial \"site/footer\" %}";
         echo "</pre>
     <p>Partials can be used inside pages, layouts or other partials.</p>
@@ -115,7 +115,7 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
         The introductory text used on this page is defined in the <code>content/welcome.htm</code> file.
         Content blocks are defined and rendered with:
         <pre>";
-        // line 69
+        // line 70
         echo "{% content \"content-name.htm\" %}";
         echo "</pre>
     </p>
@@ -136,7 +136,7 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
         <div class=\"col-md-6\">
             <p>Layout file:</p>
             <pre>";
-        // line 87
+        // line 88
         $context['__cms_content_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->contentFunction("placeholder/layout.txt"        , $context['__cms_content_params']        );
         unset($context['__cms_content_params']);
@@ -145,7 +145,7 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
         <div class=\"col-md-6\">
             <p>Page file:</p>
             <pre>";
-        // line 91
+        // line 92
         $context['__cms_content_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->contentFunction("placeholder/page.txt"        , $context['__cms_content_params']        );
         unset($context['__cms_content_params']);
@@ -172,7 +172,7 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
 
     <div class=\"text-center\">
         <p><a href=\"";
-        // line 113
+        // line 114
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("ajax");
         echo "\" class=\"btn btn-lg btn-default\">Continue to AJAX framework</a></p>
     </div>
@@ -192,12 +192,13 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
 
     public function getDebugInfo()
     {
-        return array (  176 => 113,  149 => 91,  140 => 87,  119 => 69,  103 => 56,  98 => 54,  81 => 40,  43 => 4,  39 => 3,  35 => 1,);
+        return array (  176 => 114,  149 => 92,  140 => 88,  119 => 70,  103 => 57,  98 => 55,  81 => 41,  43 => 5,  39 => 4,  35 => 2,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"jumbotron\">
+        return new Source("{##}
+<div class=\"jumbotron\">
     <div class=\"container\">
         {% content \"welcome.htm\" %}
     </div>

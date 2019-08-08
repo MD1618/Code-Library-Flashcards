@@ -61,7 +61,9 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
     <p class=\"lead\">
         Rate the difficulty you had in recalling the answer and the app will judge how long to leave it until it asks the question again.
         <br>
-        This ensures the maximum effort for recalling the information and forging stronger neural connections. Like bigger muscles from working out you will then find it easier to recall said information.
+        This ensures the maximum effort for recalling the information and forging stronger neural connections. Just like building muscles in the gym.
+        <br>
+        Efficient learning.
     </p>
    
 
@@ -115,7 +117,9 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
     <p class=\"lead\">
         Rate the difficulty you had in recalling the answer and the app will judge how long to leave it until it asks the question again.
         <br>
-        This ensures the maximum effort for recalling the information and forging stronger neural connections. Like bigger muscles from working out you will then find it easier to recall said information.
+        This ensures the maximum effort for recalling the information and forging stronger neural connections. Just like building muscles in the gym.
+        <br>
+        Efficient learning.
     </p>
    
 

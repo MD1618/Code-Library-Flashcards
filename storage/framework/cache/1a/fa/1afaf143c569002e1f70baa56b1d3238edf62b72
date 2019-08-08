@@ -1,4 +1,4 @@
-1565254618a:1:{s:8:"home.htm";a:8:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:982:"title = "Demonstration"
+1565257741a:1:{s:8:"home.htm";a:8:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:968:"title = "Demonstration"
 url = "/"
 layout = "default"
 ==
@@ -27,7 +27,9 @@ layout = "default"
     <p class="lead">
         Rate the difficulty you had in recalling the answer and the app will judge how long to leave it until it asks the question again.
         <br>
-        This ensures the maximum effort for recalling the information and forging stronger neural connections. Like bigger muscles from working out you will then find it easier to recall said information.
+        This ensures the maximum effort for recalling the information and forging stronger neural connections. Just like building muscles in the gym.
+        <br>
+        Efficient learning.
     </p>
    
 
@@ -37,7 +39,7 @@ layout = "default"
 
 
 </div>
-";s:5:"mtime";i:1565254015;s:6:"markup";s:925:"{##}
+";s:5:"mtime";i:1565254561;s:6:"markup";s:911:"{##}
 <div class="jumbotron">
     <div class="container">
         {% content "welcome.htm" %}
@@ -62,7 +64,9 @@ layout = "default"
     <p class="lead">
         Rate the difficulty you had in recalling the answer and the app will judge how long to leave it until it asks the question again.
         <br>
-        This ensures the maximum effort for recalling the information and forging stronger neural connections. Like bigger muscles from working out you will then find it easier to recall said information.
+        This ensures the maximum effort for recalling the information and forging stronger neural connections. Just like building muscles in the gym.
+        <br>
+        Efficient learning.
     </p>
    
 

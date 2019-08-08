@@ -35,10 +35,10 @@ class __TwigTemplate_b73381c06ff5fadb67b139f5249d7fb462e388d1cfd08236d2e6179070d
         echo "<div id=\"footer\">
     <div class=\"container\">
         <hr />
-        <p class=\"muted credit\">&copy; 2013 - ";
+        <p class=\"muted credit\">&copy;";
         // line 4
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
-        echo " Alexey Bobkov &amp; Samuel Georges.</p>
+        echo " M.Drahony</p>
     </div>
 </div>";
     }
@@ -63,7 +63,7 @@ class __TwigTemplate_b73381c06ff5fadb67b139f5249d7fb462e388d1cfd08236d2e6179070d
         return new Source("<div id=\"footer\">
     <div class=\"container\">
         <hr />
-        <p class=\"muted credit\">&copy; 2013 - {{ \"now\"|date(\"Y\") }} Alexey Bobkov &amp; Samuel Georges.</p>
+        <p class=\"muted credit\">&copy;{{ \"now\"|date(\"Y\") }} M.Drahony</p>
     </div>
 </div>", "C:\\xampp\\htdocs\\FlashCards/themes/flashcards/partials/site/footer.htm", "");
     }

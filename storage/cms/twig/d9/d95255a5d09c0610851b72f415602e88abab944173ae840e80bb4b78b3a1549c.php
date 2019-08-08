@@ -45,7 +45,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
             <a class=\"navbar-brand\" href=\"";
         // line 11
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
-        echo "\">October Demo</a>
+        echo "\">Flash Cards</a>
         </div>
         <div class=\"collapse navbar-collapse navbar-main-collapse\">
             <ul class=\"nav navbar-nav\">
@@ -57,7 +57,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
         }
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
-        echo "\">Basic concepts</a></li>
+        echo "\">Home</a></li>
                 <li class=\"";
         // line 17
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 17), "id", [], "any", false, false, false, 17) == "ajax")) {
@@ -65,7 +65,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
         }
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("ajax");
-        echo "\">AJAX framework</a></li>
+        echo "\">Decks</a></li>
                 <li class=\"";
         // line 18
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 18), "id", [], "any", false, false, false, 18) == "plugins")) {
@@ -73,7 +73,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
         }
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("plugins");
-        echo "\">Plugin components</a></li>
+        echo "\">About</a></li>
             </ul>
         </div>
     </div>
@@ -107,14 +107,14 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
             </button>
-            <a class=\"navbar-brand\" href=\"{{ 'home'|page }}\">October Demo</a>
+            <a class=\"navbar-brand\" href=\"{{ 'home'|page }}\">Flash Cards</a>
         </div>
         <div class=\"collapse navbar-collapse navbar-main-collapse\">
             <ul class=\"nav navbar-nav\">
                 <li class=\"separator hidden-xs\"></li>
-                <li class=\"{% if this.page.id == 'home' %}active{% endif %}\"><a href=\"{{ 'home'|page }}\">Basic concepts</a></li>
-                <li class=\"{% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'ajax'|page }}\">AJAX framework</a></li>
-                <li class=\"{% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">Plugin components</a></li>
+                <li class=\"{% if this.page.id == 'home' %}active{% endif %}\"><a href=\"{{ 'home'|page }}\">Home</a></li>
+                <li class=\"{% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'ajax'|page }}\">Decks</a></li>
+                <li class=\"{% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">About</a></li>
             </ul>
         </div>
     </div>

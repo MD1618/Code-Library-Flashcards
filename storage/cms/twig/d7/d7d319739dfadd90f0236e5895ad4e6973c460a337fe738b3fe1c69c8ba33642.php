@@ -32,7 +32,12 @@ class __TwigTemplate_03afd10dcaf7fa9f789117158f2c37c493e189310fc20b953c7997cade1
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<h1>Decks</h1>";
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("session"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 2
+        echo "
+<h1>Decks</h1>";
     }
 
     public function getTemplateName()
@@ -40,13 +45,20 @@ class __TwigTemplate_03afd10dcaf7fa9f789117158f2c37c493e189310fc20b953c7997cade1
         return "C:\\xampp\\htdocs\\FlashCards/themes/flashcards/pages/decks.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  35 => 1,);
+        return array (  39 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<h1>Decks</h1>", "C:\\xampp\\htdocs\\FlashCards/themes/flashcards/pages/decks.htm", "");
+        return new Source("{% component 'session' %}
+
+<h1>Decks</h1>", "C:\\xampp\\htdocs\\FlashCards/themes/flashcards/pages/decks.htm", "");
     }
 }

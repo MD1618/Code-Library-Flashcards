@@ -1,12 +1,12 @@
-1565268761a:1:{s:15:"deck-single.htm";a:10:{s:8:"fileName";s:15:"deck-single.htm";s:7:"content";s:647:"title = "Deck Single"
-url = "/deck/:id"
+1565269209a:1:{s:15:"deck-single.htm";a:10:{s:8:"fileName";s:15:"deck-single.htm";s:7:"content";s:653:"title = "Deck Single"
+url = "/deck/:slug"
 layout = "default"
 is_hidden = 0
 
 [builderDetails]
 modelClass = "Martin\Decks\Models\Deck"
-identifierValue = "{{ :id }}"
-modelKeyColumn = "id"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
 displayColumn = "name"
 notFoundMessage = "Record not found"
 ==
@@ -23,7 +23,7 @@ notFoundMessage = "Record not found"
     {{ html_limit(record.description, 50)|raw }}
 {% else %}
     {{ notFoundMessage }}
-{% endif %}";s:5:"mtime";i:1565267192;s:6:"markup";s:389:"{##}
+{% endif %}";s:5:"mtime";i:1565268581;s:6:"markup";s:389:"{##}
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
@@ -36,4 +36,4 @@ notFoundMessage = "Record not found"
     {{ html_limit(record.description, 50)|raw }}
 {% else %}
     {{ notFoundMessage }}
-{% endif %}";s:4:"code";N;s:5:"title";s:11:"Deck Single";s:3:"url";s:9:"/deck/:id";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:24:"Martin\Decks\Models\Deck";s:15:"identifierValue";s:9:"{{ :id }}";s:14:"modelKeyColumn";s:2:"id";s:13:"displayColumn";s:4:"name";s:15:"notFoundMessage";s:16:"Record not found";}}}
+{% endif %}";s:4:"code";N;s:5:"title";s:11:"Deck Single";s:3:"url";s:11:"/deck/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:24:"Martin\Decks\Models\Deck";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"name";s:15:"notFoundMessage";s:16:"Record not found";}}}

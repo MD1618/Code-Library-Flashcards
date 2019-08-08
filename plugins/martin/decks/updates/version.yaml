@@ -3,3 +3,6 @@
 1.0.2:
     - 'Created table martin_decks_'
     - builder_table_create_martin_decks_.php
+1.0.3:
+    - 'Updated table martin_decks_'
+    - builder_table_update_martin_decks_.php

@@ -1,0 +1,66 @@
+1565264519a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1736:"==
+{##}
+<!-- Nav -->
+<nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ 'home'|page }}">Space Cards</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li class="separator hidden-xs"></li>
+                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
+                
+                {# <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">About</a></li> #}
+
+                {% if user %}
+                    <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'decks'|page }}">Decks</a></li>
+                    <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Profile</a></li>
+                    <li><a data-request="onLogout" data-request-data="redirect: '/'">Sign out</a></li>
+                {% else %}
+                   <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Login</a></li>
+                {% endif %}
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>";s:5:"mtime";i:1565258425;s:6:"markup";s:1732:"{##}
+<!-- Nav -->
+<nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ 'home'|page }}">Space Cards</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li class="separator hidden-xs"></li>
+                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
+                
+                {# <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">About</a></li> #}
+
+                {% if user %}
+                    <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'decks'|page }}">Decks</a></li>
+                    <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Profile</a></li>
+                    <li><a data-request="onLogout" data-request-data="redirect: '/'">Sign out</a></li>
+                {% else %}
+                   <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Login</a></li>
+                {% endif %}
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

@@ -1,0 +1,4 @@
+title: Decks
+modelClass: Martin\Decks\Models\Deck
+toolbar:
+    buttons: reorder_toolbar

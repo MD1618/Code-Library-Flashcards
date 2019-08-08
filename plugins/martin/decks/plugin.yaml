@@ -4,3 +4,8 @@ plugin:
     author: martin
     icon: oc-icon-list
     homepage: ''
+navigation:
+    main-menu-item:
+        label: Decks
+        url: martin/decks/decks
+        icon: icon-list

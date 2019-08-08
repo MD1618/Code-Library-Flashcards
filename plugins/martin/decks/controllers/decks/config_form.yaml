@@ -1,0 +1,10 @@
+name: Decks
+form: $/martin/decks/models/deck/fields.yaml
+modelClass: Martin\Decks\Models\Deck
+defaultRedirect: martin/decks/decks
+create:
+    redirect: 'martin/decks/decks/update/:id'
+    redirectClose: martin/decks/decks
+update:
+    redirect: martin/decks/decks
+    redirectClose: martin/decks/decks

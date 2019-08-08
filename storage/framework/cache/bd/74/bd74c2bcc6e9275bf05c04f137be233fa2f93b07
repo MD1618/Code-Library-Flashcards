@@ -1,4 +1,6 @@
-1565257742a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1192:"<!-- Nav -->
+1565258570a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1705:"==
+{##}
+<!-- Nav -->
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -14,13 +16,22 @@
             <ul class="nav navbar-nav">
                 <li class="separator hidden-xs"></li>
                 <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
-                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Decks</a></li>
+                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'decks'|page }}">Decks</a></li>
                 <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">About</a></li>
+
+                {% if user %}
+                 <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Profile</a></li>
+                    <li><a data-request="onLogout" data-request-data="redirect: '/'">Sign out</a></li>
+                {% else %}
+                   <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Login</a></li>
+                {% endif %}
+                
+                
             </ul>
         </div>
     </div>
-</nav>
-";s:5:"mtime";i:1565254193;s:6:"markup";s:1191:"<!-- Nav -->
+</nav>";s:5:"mtime";i:1565257967;s:6:"markup";s:1701:"{##}
+<!-- Nav -->
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -36,9 +47,18 @@
             <ul class="nav navbar-nav">
                 <li class="separator hidden-xs"></li>
                 <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
-                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Decks</a></li>
+                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'decks'|page }}">Decks</a></li>
                 <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">About</a></li>
+
+                {% if user %}
+                 <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Profile</a></li>
+                    <li><a data-request="onLogout" data-request-data="redirect: '/'">Sign out</a></li>
+                {% else %}
+                   <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Login</a></li>
+                {% endif %}
+                
+                
             </ul>
         </div>
     </div>
-</nav>";s:4:"code";N;}}
+</nav>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

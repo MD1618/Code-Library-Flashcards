@@ -17,4 +17,5 @@
   'RainLab\\User\\Components\\ResetPassword' => 'plugins\\rainlab\\user\\components\\ResetPassword.php',
   'RainLab\\User\\Facades\\Auth' => 'plugins\\rainlab\\user\\facades\\Auth.php',
   'RainLab\\User\\Classes\\AuthManager' => 'plugins\\rainlab\\user\\classes\\AuthManager.php',
+  'RainLab\\User\\Models\\Throttle' => 'plugins\\rainlab\\user\\models\\Throttle.php',
 );

@@ -1,4 +1,4 @@
-1565264581a:1:{s:9:"decks.htm";a:11:{s:8:"fileName";s:9:"decks.htm";s:7:"content";s:2141:"title = "Decks"
+1565267272a:1:{s:9:"decks.htm";a:11:{s:8:"fileName";s:9:"decks.htm";s:7:"content";s:2300:"title = "Decks"
 url = "/decks"
 layout = "default"
 is_hidden = 0
@@ -38,9 +38,11 @@ pageNumber = "{{ :page }}"
                 {% if detailsPage %}
                     <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
                 {% endif %}
-
-                {{ attribute(record, displayColumn) }}
-
+                <span style="font-size:25px;">
+                   {{ record.name }}
+                </span>                    
+                    <br>
+                {{ html_limit(record.description, 50)|raw }}
                 {% if detailsPage %}
                     </a>
                 {% endif %}
@@ -67,7 +69,7 @@ pageNumber = "{{ :page }}"
             <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
         {% endif %}
     </ul>
-{% endif %}";s:5:"mtime";i:1565263974;s:6:"markup";s:1779:"{% component 'session' %}
+{% endif %}";s:5:"mtime";i:1565266665;s:6:"markup";s:1938:"{% component 'session' %}
 
 
 <h1>Decks</h1>
@@ -88,9 +90,11 @@ pageNumber = "{{ :page }}"
                 {% if detailsPage %}
                     <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
                 {% endif %}
-
-                {{ attribute(record, displayColumn) }}
-
+                <span style="font-size:25px;">
+                   {{ record.name }}
+                </span>                    
+                    <br>
+                {{ html_limit(record.description, 50)|raw }}
                 {% if detailsPage %}
                     </a>
                 {% endif %}

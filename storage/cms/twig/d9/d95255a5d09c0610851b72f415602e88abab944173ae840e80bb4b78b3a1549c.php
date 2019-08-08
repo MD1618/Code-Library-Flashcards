@@ -58,29 +58,24 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">Home</a></li>
-                <li class=\"";
-        // line 18
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 18), "id", [], "any", false, false, false, 18) == "ajax")) {
-            echo "active";
-        }
-        echo "\"><a href=\"";
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("decks");
-        echo "\">Decks</a></li>
-                <li class=\"";
-        // line 19
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 19), "id", [], "any", false, false, false, 19) == "plugins")) {
-            echo "active";
-        }
-        echo "\"><a href=\"";
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("plugins");
-        echo "\">About</a></li>
-
+                
+                ";
+        // line 20
+        echo "
                 ";
         // line 21
         if (($context["user"] ?? null)) {
             // line 22
-            echo "                 <li class=\"";
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 22), "id", [], "any", false, false, false, 22) == "login")) {
+            echo "                    <li class=\"";
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 22), "id", [], "any", false, false, false, 22) == "ajax")) {
+                echo "active";
+            }
+            echo "\"><a href=\"";
+            echo $this->extensions['Cms\Twig\Extension']->pageFilter("decks");
+            echo "\">Decks</a></li>
+                    <li class=\"";
+            // line 23
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 23), "id", [], "any", false, false, false, 23) == "login")) {
                 echo "active";
             }
             echo "\"><a href=\"";
@@ -89,9 +84,9 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
                     <li><a data-request=\"onLogout\" data-request-data=\"redirect: '/'\">Sign out</a></li>
                 ";
         } else {
-            // line 25
+            // line 26
             echo "                   <li class=\"";
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 25), "id", [], "any", false, false, false, 25) == "login")) {
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 26), "id", [], "any", false, false, false, 26) == "login")) {
                 echo "active";
             }
             echo "\"><a href=\"";
@@ -99,7 +94,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
             echo "\">Login</a></li>
                 ";
         }
-        // line 27
+        // line 28
         echo "                
                 
             </ul>
@@ -120,7 +115,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
 
     public function getDebugInfo()
     {
-        return array (  103 => 27,  93 => 25,  82 => 22,  80 => 21,  71 => 19,  63 => 18,  55 => 17,  47 => 12,  35 => 2,);
+        return array (  98 => 28,  88 => 26,  78 => 23,  69 => 22,  67 => 21,  64 => 20,  55 => 17,  47 => 12,  35 => 2,);
     }
 
     public function getSourceContext()
@@ -142,11 +137,12 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
             <ul class=\"nav navbar-nav\">
                 <li class=\"separator hidden-xs\"></li>
                 <li class=\"{% if this.page.id == 'home' %}active{% endif %}\"><a href=\"{{ 'home'|page }}\">Home</a></li>
-                <li class=\"{% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'decks'|page }}\">Decks</a></li>
-                <li class=\"{% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">About</a></li>
+                
+                {# <li class=\"{% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">About</a></li> #}
 
                 {% if user %}
-                 <li class=\"{% if this.page.id == 'login' %}active{% endif %}\"><a href=\"{{ 'login'|page }}\">Profile</a></li>
+                    <li class=\"{% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'decks'|page }}\">Decks</a></li>
+                    <li class=\"{% if this.page.id == 'login' %}active{% endif %}\"><a href=\"{{ 'login'|page }}\">Profile</a></li>
                     <li><a data-request=\"onLogout\" data-request-data=\"redirect: '/'\">Sign out</a></li>
                 {% else %}
                    <li class=\"{% if this.page.id == 'login' %}active{% endif %}\"><a href=\"{{ 'login'|page }}\">Login</a></li>

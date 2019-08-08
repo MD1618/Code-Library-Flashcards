@@ -1,9 +1,10 @@
-1565258106a:1:{s:9:"login.htm";a:10:{s:8:"fileName";s:9:"login.htm";s:7:"content";s:580:"title = "Login"
+1565259064a:1:{s:9:"login.htm";a:10:{s:8:"fileName";s:9:"login.htm";s:7:"content";s:600:"title = "Login"
 url = "/login"
 layout = "default"
 is_hidden = 0
 
 [account]
+redirect = "decks"
 paramCode = "code"
 forceSecure = 0
 ==
@@ -30,7 +31,7 @@ forceSecure = 0
 
     {% partial account ~ '::deactivate_link' %}
 
-{% endif %}";s:5:"mtime";i:1565257502;s:6:"markup";s:458:"{% if not user %}
+{% endif %}";s:5:"mtime";i:1565258461;s:6:"markup";s:458:"{% if not user %}
 
     <div class="row">
 
@@ -53,4 +54,4 @@ forceSecure = 0
 
     {% partial account ~ '::deactivate_link' %}
 
-{% endif %}";s:4:"code";N;s:5:"title";s:5:"Login";s:3:"url";s:6:"/login";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:7:"account";a:2:{s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}}}
+{% endif %}";s:4:"code";N;s:5:"title";s:5:"Login";s:3:"url";s:6:"/login";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:7:"account";a:3:{s:8:"redirect";s:5:"decks";s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}}}

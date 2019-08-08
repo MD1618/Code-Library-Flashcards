@@ -1,0 +1,11 @@
+columns:
+    deck_name:
+        label: Deck
+        type: text
+        searchable: true
+        sortable: true
+    front:
+        label: Front
+        type: text
+        searchable: true
+        sortable: true

@@ -1,0 +1,13 @@
+fields:
+    deck_name:
+        label: Deck
+        span: full
+        type: text
+    front:
+        label: Front
+        span: full
+        type: text
+    back:
+        label: Back
+        span: full
+        type: text

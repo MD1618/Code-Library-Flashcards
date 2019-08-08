@@ -5,10 +5,13 @@ use Model;
 /**
  * Model
  */
-class Deck extends Model
+class Card extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
+    
+
+
     /*
      * Disable timestamps by default.
      * Remove this line if timestamps are defined in the database table.
@@ -19,7 +22,7 @@ class Deck extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'martin_decks_';
+    public $table = 'martin_decks_cards';
 
     /**
      * @var array Validation rules
@@ -27,7 +30,9 @@ class Deck extends Model
     public $rules = [
     ];
 
-    public $hasMany = [
-        'cards' => 'martin\decks\models\Card'
+    
+
+    public $belongsTo = [
+        'deck' => 'martin\decks\models\Deck'
     ];
 }

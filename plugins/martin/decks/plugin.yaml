@@ -9,3 +9,7 @@ navigation:
         label: Decks
         url: martin/decks/decks
         icon: icon-list
+    main-menu-item2:
+        label: Cards
+        url: martin/decks/cards
+        icon: icon-list-ul

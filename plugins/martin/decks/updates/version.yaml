@@ -6,3 +6,27 @@
 1.0.3:
     - 'Updated table martin_decks_'
     - builder_table_update_martin_decks_.php
+1.0.4:
+    - 'Created table martin_decks_cards'
+    - builder_table_create_martin_decks_cards.php
+1.0.5:
+    - 'Updated table martin_decks_cards'
+    - builder_table_update_martin_decks_cards.php
+1.0.6:
+    - 'Updated table martin_decks_cards'
+    - builder_table_update_martin_decks_cards_2.php
+1.0.7:
+    - 'Updated table martin_decks_cards'
+    - builder_table_update_martin_decks_cards_3.php
+1.0.8:
+    - 'Updated table martin_decks_cards'
+    - builder_table_update_martin_decks_cards_4.php
+1.0.9:
+    - 'Updated table martin_decks_cards'
+    - builder_table_update_martin_decks_cards_5.php
+1.0.10:
+    - 'Updated table martin_decks_cards'
+    - builder_table_update_martin_decks_cards_6.php
+1.0.11:
+    - 'Updated table martin_decks_cards'
+    - builder_table_update_martin_decks_cards_7.php

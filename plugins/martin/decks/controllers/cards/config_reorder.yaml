@@ -1,0 +1,4 @@
+title: Cards
+modelClass: Martin\Decks\Models\Card
+toolbar:
+    buttons: reorder_toolbar

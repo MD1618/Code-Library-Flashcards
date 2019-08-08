@@ -1,0 +1,6 @@
+plugin:
+    name: 'martin.decks::lang.plugin.name'
+    description: 'martin.decks::lang.plugin.description'
+    author: martin
+    icon: oc-icon-list
+    homepage: ''

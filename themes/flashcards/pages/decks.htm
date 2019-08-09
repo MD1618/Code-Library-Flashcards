@@ -17,9 +17,64 @@ detailsPage = "deck-single"
 detailsKeyColumn = "slug"
 detailsUrlParameter = "slug"
 pageNumber = "{{ :page }}"
+
+[builderList builderList2]
+modelClass = "Martin\Decks\Models\Card"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "front"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
 ==
 {% component 'session' %}
 
+
+{% set records = builderList2.records %}
+{% set displayColumn = builderList2.displayColumn %}
+{% set noRecordsMessage = builderList2.noRecordsMessage %}
+{% set detailsPage = builderList2.detailsPage %}
+{% set detailsKeyColumn = builderList2.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList2.detailsUrlParameter %}
+
+<ul class="record-list">
+    {% for record in records %}
+        <li>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+              
+                <a>
+                {{ record }}
+               
+                
+                {% if detailsPage %}
+                    </a>
+                {% endif %}
+            {% endspaceless %}
+        </li>
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+</ul>
+
+{% if records.lastPage > 1 %}
+    <ul class="pagination">
+        {% if records.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..records.lastPage %}
+            <li class="{{ records.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if records.lastPage > records.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}
 
 <h1>Decks</h1>
 

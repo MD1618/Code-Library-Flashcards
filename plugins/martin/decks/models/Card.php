@@ -10,7 +10,10 @@ class Card extends Model
     use \October\Rain\Database\Traits\Validation;
     
     
-
+    public function index()    // <=== Action method
+    {
+        return "testing";
+    }
 
     /*
      * Disable timestamps by default.

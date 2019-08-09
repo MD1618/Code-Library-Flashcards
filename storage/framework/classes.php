@@ -86,4 +86,5 @@
   'RainLab\\Builder\\Classes\\ComponentHelper' => 'plugins\\rainlab\\builder\\classes\\ComponentHelper.php',
   'martin\\decks\\Controllers\\cards' => 'plugins\\martin\\decks\\controllers\\cards.php',
   'Martin\\Decks\\Models\\Card' => 'plugins\\martin\\decks\\models\\Card.php',
+  'martin\\decks\\Components\\Cards' => 'plugins\\martin\\decks\\components\\Cards.php',
 );

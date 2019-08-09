@@ -1,4 +1,4 @@
-1565337005a:1:{s:15:"deck-single.htm";a:10:{s:8:"fileName";s:15:"deck-single.htm";s:7:"content";s:653:"title = "Deck Single"
+1565341262a:1:{s:15:"deck-single.htm";a:10:{s:8:"fileName";s:15:"deck-single.htm";s:7:"content";s:653:"title = "Deck Single"
 url = "/deck/:slug"
 layout = "default"
 is_hidden = 0

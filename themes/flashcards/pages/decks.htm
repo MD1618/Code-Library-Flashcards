@@ -27,6 +27,8 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+
+[cards]
 ==
 {% component 'session' %}
 
@@ -37,6 +39,20 @@ pageNumber = "{{ :page }}"
 {% set detailsPage = builderList2.detailsPage %}
 {% set detailsKeyColumn = builderList2.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList2.detailsUrlParameter %}
+
+{% set cards = cards.cards %}
+
+<ul>
+    {% for card in cards %}
+    <li>
+        {{ card.front|raw }}
+    </li>
+    <li>
+        {{ card.back|raw }}
+    </li>
+    {% endfor %}
+</ul>
+
 
 <ul class="record-list">
     {% for record in records %}

@@ -52,8 +52,11 @@ class __TwigTemplate_03afd10dcaf7fa9f789117158f2c37c493e189310fc20b953c7997cade1
         // line 9
         $context["detailsUrlParameter"] = twig_get_attribute($this->env, $this->source, ($context["builderList2"] ?? null), "detailsUrlParameter", [], "any", false, false, false, 9);
         // line 10
-        echo "
-<ul class=\"record-list\">
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("cards"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 11
+        echo "<ul class=\"record-list\">
     ";
         // line 12
         $context['_parent'] = $context;
@@ -73,10 +76,7 @@ class __TwigTemplate_03afd10dcaf7fa9f789117158f2c37c493e189310fc20b953c7997cade1
             // line 18
             echo twig_escape_filter($this->env, $context["record"], "html", null, true);
             echo "
-                ";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["record"], "Card", [], "any", false, false, false, 19), "front", [], "any", false, false, false, 19), "html", null, true);
-            echo "
+               
                 
                 ";
             // line 21
@@ -306,7 +306,7 @@ class __TwigTemplate_03afd10dcaf7fa9f789117158f2c37c493e189310fc20b953c7997cade1
 
     public function getDebugInfo()
     {
-        return array (  292 => 97,  286 => 95,  284 => 94,  281 => 93,  270 => 90,  265 => 89,  261 => 88,  258 => 87,  252 => 85,  250 => 84,  247 => 83,  245 => 82,  241 => 80,  232 => 78,  226 => 76,  223 => 75,  219 => 73,  217 => 72,  213 => 71,  207 => 68,  204 => 67,  198 => 65,  195 => 64,  192 => 63,  189 => 61,  184 => 60,  180 => 58,  178 => 57,  176 => 56,  174 => 55,  172 => 54,  170 => 53,  168 => 52,  162 => 48,  158 => 46,  152 => 44,  150 => 43,  147 => 42,  136 => 39,  131 => 38,  127 => 37,  124 => 36,  118 => 34,  116 => 33,  113 => 32,  111 => 31,  107 => 29,  98 => 27,  92 => 25,  89 => 24,  85 => 22,  83 => 21,  78 => 19,  74 => 18,  70 => 16,  67 => 15,  64 => 13,  59 => 12,  55 => 10,  53 => 9,  51 => 8,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  39 => 2,  35 => 1,);
+        return array (  292 => 97,  286 => 95,  284 => 94,  281 => 93,  270 => 90,  265 => 89,  261 => 88,  258 => 87,  252 => 85,  250 => 84,  247 => 83,  245 => 82,  241 => 80,  232 => 78,  226 => 76,  223 => 75,  219 => 73,  217 => 72,  213 => 71,  207 => 68,  204 => 67,  198 => 65,  195 => 64,  192 => 63,  189 => 61,  184 => 60,  180 => 58,  178 => 57,  176 => 56,  174 => 55,  172 => 54,  170 => 53,  168 => 52,  162 => 48,  158 => 46,  152 => 44,  150 => 43,  147 => 42,  136 => 39,  131 => 38,  127 => 37,  124 => 36,  118 => 34,  116 => 33,  113 => 32,  111 => 31,  107 => 29,  98 => 27,  92 => 25,  89 => 24,  85 => 22,  83 => 21,  77 => 18,  73 => 16,  70 => 15,  67 => 13,  62 => 12,  59 => 11,  55 => 10,  53 => 9,  51 => 8,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  39 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -320,7 +320,7 @@ class __TwigTemplate_03afd10dcaf7fa9f789117158f2c37c493e189310fc20b953c7997cade1
 {% set detailsPage = builderList2.detailsPage %}
 {% set detailsKeyColumn = builderList2.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList2.detailsUrlParameter %}
-
+{% component 'cards' %}
 <ul class=\"record-list\">
     {% for record in records %}
         <li>
@@ -329,7 +329,7 @@ class __TwigTemplate_03afd10dcaf7fa9f789117158f2c37c493e189310fc20b953c7997cade1
               
                 <a>
                 {{ record }}
-                {{ record.Card.front }}
+               
                 
                 {% if detailsPage %}
                     </a>

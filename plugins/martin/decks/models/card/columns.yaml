@@ -10,5 +10,5 @@ columns:
         searchable: true
         sortable: true
     deck_id:
-        label: Deck
+        label: 'Deck ID'
         type: text

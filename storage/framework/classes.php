@@ -87,4 +87,10 @@
   'martin\\decks\\Controllers\\cards' => 'plugins\\martin\\decks\\controllers\\cards.php',
   'Martin\\Decks\\Models\\Card' => 'plugins\\martin\\decks\\models\\Card.php',
   'martin\\decks\\Components\\Cards' => 'plugins\\martin\\decks\\components\\Cards.php',
+  'martin\\decks\\models\\Deck' => 'plugins\\martin\\decks\\models\\Deck.php',
+  'martin\\decks\\models\\Card' => 'plugins\\martin\\decks\\models\\Card.php',
+  'martin\\decks\\Models\\Deck' => 'plugins\\martin\\decks\\models\\Deck.php',
+  'martin\\decks\\Models\\Card' => 'plugins\\martin\\decks\\models\\Card.php',
+  'martin\\Decks\\components\\Cards' => 'plugins\\martin\\decks\\components\\Cards.php',
+  'martin\\decks\\models\\deck' => 'plugins\\martin\\decks\\models\\deck.php',
 );

@@ -9,12 +9,6 @@ class Card extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
-    
-    public function index()    // <=== Action method
-    {
-        return "testing";
-    }
-
     /*
      * Disable timestamps by default.
      * Remove this line if timestamps are defined in the database table.
@@ -33,9 +27,13 @@ class Card extends Model
     public $rules = [
     ];
 
-    
-
     public $belongsTo = [
-        'deck' => 'martin\decks\models\Deck'
+        'deck' => [
+            'martin\decks\models\Deck',
+            
+            'order' => 'name'
+        ]
     ];
+
+    
 }

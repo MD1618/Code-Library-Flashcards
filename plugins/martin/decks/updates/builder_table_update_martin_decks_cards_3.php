@@ -9,8 +9,7 @@ class BuilderTableUpdateMartinDecksCards3 extends Migration
     {
         Schema::table('martin_decks_cards', function($table)
         {
-            $table->text('front')->nullable()->change();
-            $table->text('back')->nullable()->change();
+            $table->integer('deck_id')->nullable();
         });
     }
     
@@ -18,8 +17,7 @@ class BuilderTableUpdateMartinDecksCards3 extends Migration
     {
         Schema::table('martin_decks_cards', function($table)
         {
-            $table->text('front')->nullable(false)->change();
-            $table->text('back')->nullable(false)->change();
+            $table->dropColumn('deck_id');
         });
     }
 }

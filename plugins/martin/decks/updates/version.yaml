@@ -1,41 +1,38 @@
 1.0.1:
     - 'Initialize plugin.'
 1.0.2:
+    - 'Drop table martin_decks_'
+    - builder_table_delete_martin_decks_.php
+1.0.3:
+    - 'Drop table martin_decks_cards'
+    - builder_table_delete_martin_decks_cards.php
+1.0.4:
     - 'Created table martin_decks_'
     - builder_table_create_martin_decks_.php
-1.0.3:
-    - 'Updated table martin_decks_'
-    - builder_table_update_martin_decks_.php
-1.0.4:
+1.0.5:
     - 'Created table martin_decks_cards'
     - builder_table_create_martin_decks_cards.php
-1.0.5:
-    - 'Updated table martin_decks_cards'
-    - builder_table_update_martin_decks_cards.php
 1.0.6:
-    - 'Updated table martin_decks_cards'
-    - builder_table_update_martin_decks_cards_2.php
+    - 'Created table martin_decks_pivot'
+    - builder_table_create_martin_decks_pivot.php
 1.0.7:
     - 'Updated table martin_decks_cards'
-    - builder_table_update_martin_decks_cards_3.php
+    - builder_table_update_martin_decks_cards.php
 1.0.8:
     - 'Updated table martin_decks_cards'
-    - builder_table_update_martin_decks_cards_4.php
+    - builder_table_update_martin_decks_cards_2.php
 1.0.9:
     - 'Updated table martin_decks_cards'
-    - builder_table_update_martin_decks_cards_5.php
+    - builder_table_update_martin_decks_cards_3.php
 1.0.10:
     - 'Updated table martin_decks_cards'
-    - builder_table_update_martin_decks_cards_6.php
+    - builder_table_update_martin_decks_cards_4.php
 1.0.11:
     - 'Updated table martin_decks_cards'
-    - builder_table_update_martin_decks_cards_7.php
+    - builder_table_update_martin_decks_cards_5.php
 1.0.12:
     - 'Updated table martin_decks_cards'
-    - builder_table_update_martin_decks_cards_8.php
+    - builder_table_update_martin_decks_cards_6.php
 1.0.13:
     - 'Updated table martin_decks_cards'
-    - builder_table_update_martin_decks_cards_9.php
-1.0.14:
-    - 'Updated table martin_decks_cards'
-    - builder_table_update_martin_decks_cards_10.php
+    - builder_table_update_martin_decks_cards_7.php

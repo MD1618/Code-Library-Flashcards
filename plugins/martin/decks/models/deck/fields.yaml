@@ -3,15 +3,3 @@ fields:
         label: Name
         span: full
         type: text
-    description:
-        label: Description
-        size: ''
-        span: full
-        type: richeditor
-    slug:
-        label: Slug
-        span: auto
-        preset:
-            field: name
-            type: slug
-        type: text

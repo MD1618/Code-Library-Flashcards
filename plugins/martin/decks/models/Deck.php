@@ -26,8 +26,20 @@ class Deck extends Model
      */
     public $rules = [
     ];
-
+    
     public $hasMany = [
-        'cards' => 'martin\decks\models\Card'
+        'cards' => 'martin\decks\Models\Card'
     ];
+
+    // public $belongsToMany = [
+    //     'cards' => [
+    //         'martin\decks\Models\Card',
+    //         'table' => 'martin_decks_pivot',
+    //         'order' => 'front'
+    //     ]
+    // ];
+
+    // public $hasMany = [
+    //    'cards' => 'martin\decks\models\Card'
+    // ];
 }

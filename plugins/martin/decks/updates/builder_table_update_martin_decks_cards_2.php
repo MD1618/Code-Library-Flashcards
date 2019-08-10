@@ -9,7 +9,7 @@ class BuilderTableUpdateMartinDecksCards2 extends Migration
     {
         Schema::table('martin_decks_cards', function($table)
         {
-            $table->string('deck_name')->nullable();
+            $table->dropColumn('deck_id');
         });
     }
     
@@ -17,7 +17,7 @@ class BuilderTableUpdateMartinDecksCards2 extends Migration
     {
         Schema::table('martin_decks_cards', function($table)
         {
-            $table->dropColumn('deck_name');
+            $table->integer('deck_id')->nullable();
         });
     }
 }

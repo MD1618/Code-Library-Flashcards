@@ -1,13 +1,15 @@
 fields:
-    deck_name:
-        label: Deck
-        span: full
-        type: text
     front:
         label: Front
-        span: full
+        span: auto
         type: text
     back:
         label: Back
-        span: full
+        span: auto
         type: text
+    deck:
+        label: Deck
+        span: auto
+        nameFrom: name
+        descriptionFrom: description
+        type: relation

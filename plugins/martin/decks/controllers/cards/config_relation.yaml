@@ -1,0 +1,5 @@
+deck:
+    label: deck
+    view:
+        list: $/martin/decks/models/card/columns.yaml
+        toolbarButtons: create|delete

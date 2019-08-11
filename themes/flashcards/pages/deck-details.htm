@@ -1,0 +1,26 @@
+title = "deck details"
+url = "/deck/:id"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Martin\Decks\Models\Deck"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+     {% for card in record.cards %}
+        <p>{{card.front}}</p>
+
+
+     {% endfor %}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

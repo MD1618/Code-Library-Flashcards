@@ -93,4 +93,6 @@
   'martin\\decks\\Models\\Card' => 'plugins\\martin\\decks\\models\\Card.php',
   'martin\\Decks\\components\\Cards' => 'plugins\\martin\\decks\\components\\Cards.php',
   'martin\\decks\\models\\deck' => 'plugins\\martin\\decks\\models\\deck.php',
+  'backend\\Controllers\\media' => 'modules\\backend\\controllers\\media.php',
+  'rainlab\\user\\Controllers\\usergroups' => 'plugins\\rainlab\\user\\controllers\\usergroups.php',
 );

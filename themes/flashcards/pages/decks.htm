@@ -9,11 +9,11 @@ scope = "-"
 scopeValue = "{{ :scope }}"
 displayColumn = "name"
 noRecordsMessage = "No records found"
-detailsPage = "-"
+detailsPage = "deck-details"
+detailsKeyColumn = "id"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
 ==
-
 {% if user %}
     {% set records = builderList.records %}
     {% set displayColumn = builderList.displayColumn %}
@@ -33,14 +33,15 @@ pageNumber = "{{ :page }}"
 
                     {{ attribute(record, displayColumn) }}
                     <br>
-                    {% for card in record.cards %}
-                        <p>{{card}}</p>
-
-
-                    {% endfor %}
+                   
                     {% if detailsPage %}
                         </a>
                     {% endif %}
+                     {% for card in record.cards %}
+                        <p>Front: {{card.front}}</p>
+
+
+                    {% endfor %}
                 {% endspaceless %}
             </li>
         {% else %}

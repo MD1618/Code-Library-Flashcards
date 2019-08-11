@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ 'home'|page }}">Space Cards</a>
+            <a class="navbar-brand" href="{{ 'home'|page }}">Code Tools</a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
             <ul class="nav navbar-nav">
@@ -20,6 +20,7 @@
                 {# <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">About</a></li> #}
 
                 {% if user %}
+                    <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'code'|page }}">Code</a></li>
                     <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'decks'|page }}">Decks</a></li>
                     <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Profile</a></li>
                     <li><a data-request="onLogout" data-request-data="redirect: '/'">Sign out</a></li>

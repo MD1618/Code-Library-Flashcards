@@ -45,7 +45,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
             <a class=\"navbar-brand\" href=\"";
         // line 12
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
-        echo "\">Space Cards</a>
+        echo "\">Code Tools</a>
         </div>
         <div class=\"collapse navbar-collapse navbar-main-collapse\">
             <ul class=\"nav navbar-nav\">
@@ -71,11 +71,19 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
                 echo "active";
             }
             echo "\"><a href=\"";
+            echo $this->extensions['Cms\Twig\Extension']->pageFilter("code");
+            echo "\">Code</a></li>
+                    <li class=\"";
+            // line 23
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 23), "id", [], "any", false, false, false, 23) == "ajax")) {
+                echo "active";
+            }
+            echo "\"><a href=\"";
             echo $this->extensions['Cms\Twig\Extension']->pageFilter("decks");
             echo "\">Decks</a></li>
                     <li class=\"";
-            // line 23
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 23), "id", [], "any", false, false, false, 23) == "login")) {
+            // line 24
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 24), "id", [], "any", false, false, false, 24) == "login")) {
                 echo "active";
             }
             echo "\"><a href=\"";
@@ -84,9 +92,9 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
                     <li><a data-request=\"onLogout\" data-request-data=\"redirect: '/'\">Sign out</a></li>
                 ";
         } else {
-            // line 26
+            // line 27
             echo "                   <li class=\"";
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 26), "id", [], "any", false, false, false, 26) == "login")) {
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 27), "id", [], "any", false, false, false, 27) == "login")) {
                 echo "active";
             }
             echo "\"><a href=\"";
@@ -94,7 +102,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
             echo "\">Login</a></li>
                 ";
         }
-        // line 28
+        // line 29
         echo "                
                 
             </ul>
@@ -115,7 +123,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
 
     public function getDebugInfo()
     {
-        return array (  98 => 28,  88 => 26,  78 => 23,  69 => 22,  67 => 21,  64 => 20,  55 => 17,  47 => 12,  35 => 2,);
+        return array (  106 => 29,  96 => 27,  86 => 24,  78 => 23,  69 => 22,  67 => 21,  64 => 20,  55 => 17,  47 => 12,  35 => 2,);
     }
 
     public function getSourceContext()
@@ -131,7 +139,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
             </button>
-            <a class=\"navbar-brand\" href=\"{{ 'home'|page }}\">Space Cards</a>
+            <a class=\"navbar-brand\" href=\"{{ 'home'|page }}\">Code Tools</a>
         </div>
         <div class=\"collapse navbar-collapse navbar-main-collapse\">
             <ul class=\"nav navbar-nav\">
@@ -141,6 +149,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
                 {# <li class=\"{% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">About</a></li> #}
 
                 {% if user %}
+                    <li class=\"{% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'code'|page }}\">Code</a></li>
                     <li class=\"{% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'decks'|page }}\">Decks</a></li>
                     <li class=\"{% if this.page.id == 'login' %}active{% endif %}\"><a href=\"{{ 'login'|page }}\">Profile</a></li>
                     <li><a data-request=\"onLogout\" data-request-data=\"redirect: '/'\">Sign out</a></li>

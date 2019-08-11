@@ -2,4 +2,4 @@
 *.log
 
 *.sqlite
-/storage/**
+storage/

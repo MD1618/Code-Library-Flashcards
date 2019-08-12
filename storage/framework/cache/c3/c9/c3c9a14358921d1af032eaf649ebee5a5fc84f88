@@ -1,4 +1,4 @@
-1565523661a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1347:"description = "Default layout"
+1565584290a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1373:"description = "Default layout"
 
 [session]
 security = "all"
@@ -13,8 +13,8 @@ redirect = "home"
         <title>{{ this.page.title }}</title>
        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="OctoberCMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        
+        <link rel="icon" type="image/svg+xml" href="{{ 'assets/svg/MDWDLogo2.3.svg'|theme }}">
         <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
         {% styles %}
@@ -28,7 +28,9 @@ redirect = "home"
 
         <!-- Content -->
         <section id="layout-content">
-            {% page %}
+            <div class="gridContainer">
+                {% page %}
+            </div>
         </section>
 
         <!-- Footer -->
@@ -44,7 +46,7 @@ redirect = "home"
         {% scripts %}
 
     </body>
-</html>";s:5:"mtime";i:1565257138;s:6:"markup";s:1261:"{##}
+</html>";s:5:"mtime";i:1565581183;s:6:"markup";s:1287:"{##}
 {% component 'session' %}
 <!DOCTYPE html>
 <html>
@@ -53,8 +55,8 @@ redirect = "home"
         <title>{{ this.page.title }}</title>
        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="OctoberCMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        
+        <link rel="icon" type="image/svg+xml" href="{{ 'assets/svg/MDWDLogo2.3.svg'|theme }}">
         <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
         {% styles %}
@@ -68,7 +70,9 @@ redirect = "home"
 
         <!-- Content -->
         <section id="layout-content">
-            {% page %}
+            <div class="gridContainer">
+                {% page %}
+            </div>
         </section>
 
         <!-- Footer -->

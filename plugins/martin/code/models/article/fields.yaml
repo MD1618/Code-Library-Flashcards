@@ -1,0 +1,28 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    description:
+        label: Description
+        span: full
+        type: text
+    content:
+        label: Content
+        size: ''
+        span: full
+        type: richeditor
+    tags:
+        label: 'Tag list'
+        span: auto
+        mode: string
+        separator: comma
+        customTags: true
+        useKey: false
+        type: taglist
+    category:
+        label: Category
+        span: auto
+        nameFrom: category
+        descriptionFrom: description
+        type: relation

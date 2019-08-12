@@ -32,30 +32,11 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 2
-        echo "<div class=\"jumbotron\">
-    <div class=\"container\">
-        ";
-        // line 4
-        $context['__cms_content_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->contentFunction("welcome.htm"        , $context['__cms_content_params']        );
-        unset($context['__cms_content_params']);
-        // line 5
-        echo "    </div>
-</div>
-
-<div class=\"container\">
-
-    <div class=\"page-header\">
-        <h2>About </h2>
-    </div>
-    <p class=\"lead\">
-      Code Library and Flash Card System
-    </p>
-
-   
-
-
-
+        echo "<div class=\"\" style=\"display:grid;justify-content:space-evenly;\">
+    <object style=\"width:200px;margin:10px;\" id=\"svgObjectLarge\" type=\"image/svg+xml\" data=\"";
+        // line 3
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/svg/MDWDLogo2.3.svg");
+        echo "\" class=\"logo\"></object>
 </div>";
     }
 
@@ -71,31 +52,14 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
 
     public function getDebugInfo()
     {
-        return array (  43 => 5,  39 => 4,  35 => 2,);
+        return array (  38 => 3,  35 => 2,);
     }
 
     public function getSourceContext()
     {
         return new Source("{##}
-<div class=\"jumbotron\">
-    <div class=\"container\">
-        {% content \"welcome.htm\" %}
-    </div>
-</div>
-
-<div class=\"container\">
-
-    <div class=\"page-header\">
-        <h2>About </h2>
-    </div>
-    <p class=\"lead\">
-      Code Library and Flash Card System
-    </p>
-
-   
-
-
-
+<div class=\"\" style=\"display:grid;justify-content:space-evenly;\">
+    <object style=\"width:200px;margin:10px;\" id=\"svgObjectLarge\" type=\"image/svg+xml\" data=\"{{ 'assets/svg/MDWDLogo2.3.svg'|theme }}\" class=\"logo\"></object>
 </div>", "C:\\xampp\\htdocs\\FlashCards/themes/flashcards/pages/home.htm", "");
     }
 }

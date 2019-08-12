@@ -1,0 +1,10 @@
+name: Articles
+form: $/martin/code/models/article/fields.yaml
+modelClass: Martin\Code\Models\Article
+defaultRedirect: martin/code/articles
+create:
+    redirect: 'martin/code/articles/update/:id'
+    redirectClose: martin/code/articles
+update:
+    redirect: martin/code/articles
+    redirectClose: martin/code/articles

@@ -1,0 +1,4 @@
+title: Articles
+modelClass: Martin\Code\Models\Article
+toolbar:
+    buttons: reorder_toolbar

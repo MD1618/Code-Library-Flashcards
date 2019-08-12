@@ -42,8 +42,12 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
             </button>
-            <a class=\"navbar-brand\" href=\"";
+            <object style=\"width:80px;margin:10px;float:left;\" id=\"svgObject\" type=\"image/svg+xml\" data=\"";
         // line 12
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/svg/MDWDLogo2.3.svg");
+        echo "\" class=\"logo\"></object>
+            <a class=\"navbar-brand\" href=\"";
+        // line 13
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">Code Tools</a>
         </div>
@@ -51,8 +55,8 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
             <ul class=\"nav navbar-nav\">
                 <li class=\"separator hidden-xs\"></li>
                 <li class=\"";
-        // line 17
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 17), "id", [], "any", false, false, false, 17) == "home")) {
+        // line 18
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 18), "id", [], "any", false, false, false, 18) == "home")) {
             echo "active";
         }
         echo "\"><a href=\"";
@@ -60,30 +64,30 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
         echo "\">Home</a></li>
                 
                 ";
-        // line 20
+        // line 21
         echo "
                 ";
-        // line 21
+        // line 22
         if (($context["user"] ?? null)) {
-            // line 22
+            // line 23
             echo "                    <li class=\"";
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 22), "id", [], "any", false, false, false, 22) == "ajax")) {
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 23), "id", [], "any", false, false, false, 23) == "ajax")) {
                 echo "active";
             }
             echo "\"><a href=\"";
             echo $this->extensions['Cms\Twig\Extension']->pageFilter("code");
             echo "\">Code</a></li>
                     <li class=\"";
-            // line 23
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 23), "id", [], "any", false, false, false, 23) == "ajax")) {
+            // line 24
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 24), "id", [], "any", false, false, false, 24) == "ajax")) {
                 echo "active";
             }
             echo "\"><a href=\"";
             echo $this->extensions['Cms\Twig\Extension']->pageFilter("decks");
             echo "\">Decks</a></li>
                     <li class=\"";
-            // line 24
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 24), "id", [], "any", false, false, false, 24) == "login")) {
+            // line 25
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 25), "id", [], "any", false, false, false, 25) == "login")) {
                 echo "active";
             }
             echo "\"><a href=\"";
@@ -92,9 +96,9 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
                     <li><a data-request=\"onLogout\" data-request-data=\"redirect: '/'\">Sign out</a></li>
                 ";
         } else {
-            // line 27
+            // line 28
             echo "                   <li class=\"";
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 27), "id", [], "any", false, false, false, 27) == "login")) {
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 28), "id", [], "any", false, false, false, 28) == "login")) {
                 echo "active";
             }
             echo "\"><a href=\"";
@@ -102,7 +106,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
             echo "\">Login</a></li>
                 ";
         }
-        // line 29
+        // line 30
         echo "                
                 
             </ul>
@@ -123,7 +127,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
 
     public function getDebugInfo()
     {
-        return array (  106 => 29,  96 => 27,  86 => 24,  78 => 23,  69 => 22,  67 => 21,  64 => 20,  55 => 17,  47 => 12,  35 => 2,);
+        return array (  110 => 30,  100 => 28,  90 => 25,  82 => 24,  73 => 23,  71 => 22,  68 => 21,  59 => 18,  51 => 13,  47 => 12,  35 => 2,);
     }
 
     public function getSourceContext()
@@ -139,6 +143,7 @@ class __TwigTemplate_a665bf46de8b9616886939957e42b5b58b21dd78f3b6247d8993acd4a9a
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
             </button>
+            <object style=\"width:80px;margin:10px;float:left;\" id=\"svgObject\" type=\"image/svg+xml\" data=\"{{ 'assets/svg/MDWDLogo2.3.svg'|theme }}\" class=\"logo\"></object>
             <a class=\"navbar-brand\" href=\"{{ 'home'|page }}\">Code Tools</a>
         </div>
         <div class=\"collapse navbar-collapse navbar-main-collapse\">

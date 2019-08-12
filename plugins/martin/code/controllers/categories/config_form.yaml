@@ -1,0 +1,10 @@
+name: Categories
+form: $/martin/code/models/category/fields.yaml
+modelClass: Martin\Code\Models\Category
+defaultRedirect: martin/code/categories
+create:
+    redirect: 'martin/code/categories/update/:id'
+    redirectClose: martin/code/categories
+update:
+    redirect: martin/code/categories
+    redirectClose: martin/code/categories

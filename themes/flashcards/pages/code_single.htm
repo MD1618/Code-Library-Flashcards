@@ -1,0 +1,25 @@
+title = "code_article"
+url = "/code_article/:id"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Martin\Code\Models\Article"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    <h1>{{record.title|raw }}</h1>
+    <h5>{{record.category.category|raw }}<br>{{record.tags}}</h5>
+     <h5>{{record.description|raw }}</h5>
+    <p>{{record.content|raw }}</p><br>
+    
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

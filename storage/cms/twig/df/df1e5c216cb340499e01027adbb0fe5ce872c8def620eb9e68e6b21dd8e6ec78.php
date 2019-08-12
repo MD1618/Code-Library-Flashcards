@@ -46,10 +46,10 @@ class __TwigTemplate_5a32c173bd5773db70cb0d228cbddbb746739107521a7bdfdc446b395a3
         echo "</title>
        
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-        <meta name=\"generator\" content=\"OctoberCMS\">
-        <link rel=\"icon\" type=\"image/png\" href=\"";
+        
+        <link rel=\"icon\" type=\"image/svg+xml\" href=\"";
         // line 11
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/october.png");
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/svg/MDWDLogo2.3.svg");
         echo "\">
         <link href=\"";
         // line 12
@@ -79,37 +79,39 @@ class __TwigTemplate_5a32c173bd5773db70cb0d228cbddbb746739107521a7bdfdc446b395a3
 
         <!-- Content -->
         <section id=\"layout-content\">
-            ";
-        // line 25
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+            <div class=\"gridContainer\">
+                ";
         // line 26
-        echo "        </section>
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 27
+        echo "            </div>
+        </section>
 
         <!-- Footer -->
         <footer id=\"layout-footer\">
             ";
-        // line 30
+        // line 32
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 31
+        // line 33
         echo "        </footer>
 
         <!-- Scripts -->
         <script src=\"";
-        // line 34
+        // line 36
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
         <script src=\"";
-        // line 35
+        // line 37
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
         <script src=\"";
-        // line 36
+        // line 38
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
         ";
-        // line 37
+        // line 39
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="'. Request::getBasePath()
@@ -124,11 +126,11 @@ class __TwigTemplate_5a32c173bd5773db70cb0d228cbddbb746739107521a7bdfdc446b395a3
         echo '<link rel="stylesheet" property="stylesheet" href="'. Request::getBasePath()
                     .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 38
+        // line 40
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 39
+        // line 41
         echo "
     </body>
 </html>";
@@ -146,7 +148,7 @@ class __TwigTemplate_5a32c173bd5773db70cb0d228cbddbb746739107521a7bdfdc446b395a3
 
     public function getDebugInfo()
     {
-        return array (  132 => 39,  128 => 38,  113 => 37,  109 => 36,  105 => 35,  101 => 34,  96 => 31,  92 => 30,  86 => 26,  84 => 25,  78 => 21,  74 => 20,  67 => 15,  64 => 14,  60 => 13,  56 => 12,  52 => 11,  45 => 7,  39 => 3,  35 => 2,);
+        return array (  134 => 41,  130 => 40,  115 => 39,  111 => 38,  107 => 37,  103 => 36,  98 => 33,  94 => 32,  87 => 27,  85 => 26,  78 => 21,  74 => 20,  67 => 15,  64 => 14,  60 => 13,  56 => 12,  52 => 11,  45 => 7,  39 => 3,  35 => 2,);
     }
 
     public function getSourceContext()
@@ -160,8 +162,8 @@ class __TwigTemplate_5a32c173bd5773db70cb0d228cbddbb746739107521a7bdfdc446b395a3
         <title>{{ this.page.title }}</title>
        
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-        <meta name=\"generator\" content=\"OctoberCMS\">
-        <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/october.png'|theme }}\">
+        
+        <link rel=\"icon\" type=\"image/svg+xml\" href=\"{{ 'assets/svg/MDWDLogo2.3.svg'|theme }}\">
         <link href=\"{{ 'assets/css/vendor.css'|theme }}\" rel=\"stylesheet\">
         <link href=\"{{ 'assets/css/theme.css'|theme }}\" rel=\"stylesheet\">
         {% styles %}
@@ -175,7 +177,9 @@ class __TwigTemplate_5a32c173bd5773db70cb0d228cbddbb746739107521a7bdfdc446b395a3
 
         <!-- Content -->
         <section id=\"layout-content\">
-            {% page %}
+            <div class=\"gridContainer\">
+                {% page %}
+            </div>
         </section>
 
         <!-- Footer -->

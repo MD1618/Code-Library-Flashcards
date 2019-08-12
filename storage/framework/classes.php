@@ -105,4 +105,10 @@
   'rainlab\\blog\\Controllers\\categories' => 'plugins\\rainlab\\blog\\controllers\\categories.php',
   'RainLab\\Blog\\FormWidgets\\BlogMarkdown' => 'plugins\\rainlab\\blog\\formwidgets\\BlogMarkdown.php',
   'RainLab\\Blog\\Models\\Settings' => 'plugins\\rainlab\\blog\\models\\Settings.php',
+  'martin\\code\\Plugin' => 'plugins\\martin\\code\\Plugin.php',
+  'martin\\code\\Controllers\\articles' => 'plugins\\martin\\code\\controllers\\articles.php',
+  'Martin\\Code\\Models\\Article' => 'plugins\\martin\\code\\models\\Article.php',
+  'Martin\\Code\\Models\\Category' => 'plugins\\martin\\code\\models\\Category.php',
+  'martin\\code\\Controllers\\categories' => 'plugins\\martin\\code\\controllers\\categories.php',
+  'martin\\code\\models\\Category' => 'plugins\\martin\\code\\models\\Category.php',
 );

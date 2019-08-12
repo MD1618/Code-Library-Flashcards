@@ -574,7 +574,7 @@
 }
 
 .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li>a:hover:after {
-    background: #e67e22;
+    background: #04800b;
 }
 
 .navbar-default .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active>a:after,
@@ -593,4 +593,94 @@
 body {
     padding-top: 70px;
     background: rgb(197, 197, 197);
+}
+
+.gridContainer {
+    width: 70%;
+    /* height: 90vh; */
+    min-height: 80vh;
+    margin: auto;
+    /* display: grid;
+    grid-template-columns: auto; */
+    /* justify-content: space-evenly; */
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Styles */
+    .gridContainer {
+        width: 95%;
+    }
+}
+
+
+/* Smartphones (landscape) ----------- */
+
+@media only screen and (min-width: 321px) {
+    /* Styles */
+    .gridContainer {
+        width: 95%;
+    }
+}
+
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 320px) {
+    /* Styles */
+    .gridContainer {
+        width: 95%;
+    }
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Styles */
+    .gridContainer {
+        width: 90%;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Styles */
+    .gridContainer {
+        width: 90%;
+    }
+}
+
+
+/* iPads (portrait) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    /* Styles */
+    .gridContainer {
+        width: 90%;
+    }
+}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1024px) {
+    /* Styles */
+    .gridContainer {
+        width: 70%;
+    }
+}
+
+
+/* Large screens ----------- */
+
+@media only screen and (min-width: 1824px) {
+    /* Styles */
+    .gridContainer {
+        width: 60%;
+    }
 }

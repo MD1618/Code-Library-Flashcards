@@ -1,0 +1,20 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table martin_code_'
+    - builder_table_create_martin_code_.php
+1.0.3:
+    - 'Updated table martin_code_'
+    - builder_table_update_martin_code_.php
+1.0.4:
+    - 'Updated table martin_code_'
+    - builder_table_update_martin_code__2.php
+1.0.5:
+    - 'Updated table martin_code_'
+    - builder_table_update_martin_code__3.php
+1.0.6:
+    - 'Created table martin_code_categories'
+    - builder_table_create_martin_code_categories.php
+1.0.7:
+    - 'Updated table martin_code_'
+    - builder_table_update_martin_code__4.php

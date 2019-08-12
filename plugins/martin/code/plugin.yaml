@@ -1,0 +1,16 @@
+plugin:
+    name: 'martin.code::lang.plugin.name'
+    description: 'martin.code::lang.plugin.description'
+    author: martin
+    icon: oc-icon-code
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Code
+        url: martin/code/articles
+        icon: icon-code
+        sideMenu:
+            side-menu-item:
+                label: Categories
+                url: martin/code/categories
+                icon: icon-sort

@@ -1,0 +1,54 @@
+title = "Filter Articles"
+url = "/ajax-article"
+layout = "default"
+is_hidden = 0
+
+==
+<?
+    use martin\code\models\Article;
+    use martin\code\models\Category;
+
+    function onstart() {$this->prepareVars();}
+    function onFilterArticles() {$this->prepareVars();}
+
+    function prepareVars(){
+
+        $options = post('Filter', []);
+
+        $this['articles'] = Article::listFrontEnd($options);
+        $this['categories'] = Category::all();
+
+
+
+    }
+
+
+==
+{##}
+
+<h2>Filter Articles</h2>
+
+<div class="filterSection">
+    <div class="leftSection">
+        <div class="innerLeftSection">
+            {{ form_ajax('onFilterArticles', { update: {'articles/articles': '#partialArticles'}}) }}
+            <div id="articleFilter" class="articleFilter">
+                
+                <label>categories</label>
+                <br>
+
+                {% for category in categories %}
+                    <input type="checkbox" name="Filter[categories][]" value="{{ category.id }}" />
+                    <label>{{ category.category }}</label>
+                    <br>
+                {% endfor %}
+            </div> 
+            {{ form_close() }}
+        </div>
+    </div>  
+    <div class="rightSection">
+        <div id="partialArticles" class="innerRightSection">
+            {% partial 'articles/articles' %}
+        </div>
+    </div>  
+</div>

@@ -605,6 +605,24 @@ body {
     /* justify-content: space-evenly; */
 }
 
+.filterSection {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    /* justify-content: space-evenly; */
+}
+
+.leftSection {
+    padding: 20px;
+    background: #c5c5c5;
+    height: 300px;
+}
+
+.rightSection {
+    padding: 20px;
+    background: #dbdbdb;
+    height: 1000px;
+}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 
@@ -684,3 +702,6 @@ body {
         width: 60%;
     }
 }
+
+
+/*--------------------------*/

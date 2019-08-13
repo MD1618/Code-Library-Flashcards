@@ -12,15 +12,7 @@ fields:
         size: ''
         span: full
         type: richeditor
-    tags:
-        label: 'Tag list'
-        span: auto
-        mode: string
-        separator: comma
-        customTags: true
-        useKey: false
-        type: taglist
-    category:
+    categories:
         label: Category
         span: auto
         nameFrom: category

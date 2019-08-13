@@ -1,5 +1,5 @@
-title = "code_article"
-url = "/code_article/:id"
+title = "code_single"
+url = "/code_single/:id"
 layout = "default"
 is_hidden = 0
 
@@ -14,12 +14,20 @@ notFoundMessage = "Record not found"
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
+{% if user %}
 {% if record %}
     <h1>{{record.title|raw }}</h1>
-    <h5>{{record.category.category|raw }}<br>{{record.tags}}</h5>
-     <h5>{{record.description|raw }}</h5>
-    <p>{{record.content|raw }}</p><br>
+    <h5>
+        {% for category in record.categories %}
+        {{category.category }}, 
+        {% endfor %}<br>
+    </h5>
+     <p>{{record.description|raw }}</p>
+    <p>{{record.content|raw }}</p>
     
 {% else %}
     {{ notFoundMessage }}
+{% endif %}
+{% else %}
+<h1>Nope! Yer nae logged in pal. </h1>
 {% endif %}

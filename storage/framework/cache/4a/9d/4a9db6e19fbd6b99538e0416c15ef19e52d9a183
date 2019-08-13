@@ -1,4 +1,4 @@
-1565584290a:1:{s:9:"decks.htm";a:10:{s:8:"fileName";s:9:"decks.htm";s:7:"content";s:2500:"title = "decks"
+1565718819a:1:{s:9:"decks.htm";a:10:{s:8:"fileName";s:9:"decks.htm";s:7:"content";s:2522:"title = "decks"
 url = "/decks"
 layout = "default"
 is_hidden = 0
@@ -37,6 +37,7 @@ pageNumber = "{{ :page }}"
                     {% if detailsPage %}
                         </a>
                     {% endif %}
+                    
                      {% for card in record.cards %}
                         <p>Front: {{card.front}}</p>
 
@@ -68,7 +69,7 @@ pageNumber = "{{ :page }}"
     {% endif %}
 {% else %}
 <h1>Nope! Yer nae logged in pal. </h1>
-{% endif %}";s:5:"mtime";i:1565499820;s:6:"markup";s:2154:"{% if user %}
+{% endif %}";s:5:"mtime";i:1565682547;s:6:"markup";s:2176:"{% if user %}
     {% set records = builderList.records %}
     {% set displayColumn = builderList.displayColumn %}
     {% set noRecordsMessage = builderList.noRecordsMessage %}
@@ -91,6 +92,7 @@ pageNumber = "{{ :page }}"
                     {% if detailsPage %}
                         </a>
                     {% endif %}
+                    
                      {% for card in record.cards %}
                         <p>Front: {{card.front}}</p>
 

@@ -19,8 +19,3 @@ columns:
         type: datetime
         searchable: true
         sortable: true
-    tags:
-        label: Tags
-        type: text
-        searchable: true
-        sortable: true

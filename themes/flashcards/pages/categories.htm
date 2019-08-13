@@ -13,4 +13,8 @@ detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
 ==
+{% if user %}
 {% component 'builderList' %}
+{% else %}
+<h1>Nope! Yer nae logged in pal. </h1>
+{% endif %}

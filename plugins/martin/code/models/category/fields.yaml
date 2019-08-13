@@ -1,5 +1,5 @@
 fields:
-    category:
+    categories:
         label: Category
         span: auto
         type: text

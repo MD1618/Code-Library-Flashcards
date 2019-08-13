@@ -1,4 +1,4 @@
-1565584290a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1373:"description = "Default layout"
+1565718819a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1366:"description = "Default layout"
 
 [session]
 security = "all"
@@ -10,14 +10,14 @@ redirect = "home"
 <html>
     <head>
         <meta charset="utf-8">
-        <title>{{ this.page.title }}</title>
-       
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        {% styles %}
         
         <link rel="icon" type="image/svg+xml" href="{{ 'assets/svg/MDWDLogo2.3.svg'|theme }}">
-        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
-        {% styles %}
+        <title>{{ this.page.title }}</title>
     </head>
     <body>
 
@@ -41,25 +41,25 @@ redirect = "home"
         <!-- Scripts -->
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
         {% framework extras %}
         {% scripts %}
+        <script src="{{ 'assets/js/main.js'|theme }}"></script>
 
     </body>
-</html>";s:5:"mtime";i:1565581183;s:6:"markup";s:1287:"{##}
+</html>";s:5:"mtime";i:1565702328;s:6:"markup";s:1280:"{##}
 {% component 'session' %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>{{ this.page.title }}</title>
-       
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        {% styles %}
         
         <link rel="icon" type="image/svg+xml" href="{{ 'assets/svg/MDWDLogo2.3.svg'|theme }}">
-        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
-        {% styles %}
+        <title>{{ this.page.title }}</title>
     </head>
     <body>
 
@@ -83,9 +83,9 @@ redirect = "home"
         <!-- Scripts -->
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
         {% framework extras %}
         {% scripts %}
+        <script src="{{ 'assets/js/main.js'|theme }}"></script>
 
     </body>
 </html>";s:4:"code";N;s:11:"description";s:14:"Default layout";s:7:"session";a:2:{s:8:"security";s:3:"all";s:8:"redirect";s:4:"home";}}}

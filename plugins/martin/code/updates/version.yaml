@@ -18,3 +18,15 @@
 1.0.7:
     - 'Updated table martin_code_'
     - builder_table_update_martin_code__4.php
+1.0.8:
+    - 'Created table martin_code_pivot'
+    - builder_table_create_martin_code_pivot.php
+1.0.9:
+    - 'Updated table martin_code_'
+    - builder_table_update_martin_code__5.php
+1.0.10:
+    - 'Updated table martin_code_pivot'
+    - builder_table_update_martin_code_articles_categories.php
+1.0.11:
+    - 'Updated table martin_code_'
+    - builder_table_update_martin_code__6.php

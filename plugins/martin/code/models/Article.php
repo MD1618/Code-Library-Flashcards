@@ -21,13 +21,44 @@ class Article extends Model
     public $rules = [
     ];
 
-    public $belongsTo = [
-        'category' => [
+    public $belongsToMany = [
+        'categories' => [
             'martin\code\models\Category',
-            
-            'order' => 'category'
+            'table' => 'martin_code_articles_categories',
+            //'order' => 'category'
         ]
     ];
 
-    protected $jsonable = ['tags'];
+    
+
+    public function scopeListFrontEnd($query, $options = []){
+
+        extract(array_merge([
+
+            'page' => 1,
+            'perPage' => 10,
+            'sort' => 'title asc',
+            'categories' => null
+
+        ],$options));
+
+
+        if($categories !== null){
+
+            if(!is_array($categories)){
+                $categories = [$categories];
+            }
+       
+
+            foreach ($categories as $category){
+                $query->whereHas('categories', function($q) use ($category) {
+                    $q->where('id', '=', $category);
+                });
+            }
+        }
+
+
+        return $query->paginate($perPage, $page);
+
+    }
 }

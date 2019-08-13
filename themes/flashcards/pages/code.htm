@@ -15,38 +15,100 @@ detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
 sortColumn = "title"
 sortDirection = "asc"
+
+[searchInput]
+useAutoComplete = 1
+autoCompleteResultCount = 5
+showProviderBadge = 1
+searchPage = "search.htm"
+
+[siteSearchInclude]
 ==
+<?php
+use martin\code\models\Article;
+    use martin\code\models\Category;
+
+    function onstart() {$this->prepareVars();}
+    function onFilterArticles() {$this->prepareVars();}
+
+    function prepareVars(){
+
+        $options = post('Filter', []);
+
+        $this['articles'] = Article::listFrontEnd($options);
+        $this['categories'] = Category::all();
+
+        $this['detailsPage'] = "code_single";
+        $this['detailsKeyColumn'] = "id";
+        $this['detailsUrlParameter'] = "id";
+        
+    }
+?>
+==
+{##}
+{% if user %}
+
+
+{% component 'siteSearchInclude' %}
+<form action="{{ searchInput.searchPage | page }}?q={{ query | url_encode(true) }}" method="get">
+    <div class="ss-search-form">
+        <div class="ss-search-form__input">
+            <input name="q" type="text" placeholder="What are you looking for?" 
+                   value="{{ searchInput.query }}"
+                   autocomplete="off"
+                   autofocus
+                    {% if searchInput.useAutoComplete %}
+                        data-track-input
+                        data-request="{{ searchInput }}::onType"
+                        data-request-before-update="document.getElementById('autocomplete-results').classList.add('ss-search-form__results--visible')"
+                        data-request-update="'{{ searchInput }}::autocomplete': '#autocomplete-results'"
+                    {% endif %}
+            >
+            <button class="ss-search-form__submit" type="submit">Search</button>
+        </div>
+        <div class="ss-search-form__results" id="autocomplete-results"></div>
+    </div>
+</form>
+
+
 <h1>Code</h1>
-{% set records = builderList.records %}
+{% set articles = builderList.records %}
 {% set displayColumn = builderList.displayColumn %}
 {% set noRecordsMessage = builderList.noRecordsMessage %}
-{% set detailsPage = builderList.detailsPage %}
-{% set detailsKeyColumn = builderList.detailsKeyColumn %}
-{% set detailsUrlParameter = builderList.detailsUrlParameter %}
 
-<div style="align-items:top;">
-    <ul class="record-list">
-        {% for record in records %}
-            <li>
-                {# Use spaceless tag to remove spaces inside the A tag. #}
-                {% spaceless %}
-                    {% if detailsPage %}
-                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
-                    {% endif %}
 
-                    {{record.title|raw }}<br>
-                
-                    {% if detailsPage %}
-                        </a>
-                    {% endif %}
-                {% endspaceless %}
-            </li>
-            {{record.description|raw }}<br>
-            {{record.category.category|raw }}<br>
-            {{record.tags|raw }}<br>
+
+<div class="filterSection">
+    <div class="leftSection">
+        <div class="innerLeftSection">
+
+            {{ form_ajax('onFilterArticles', { update: {'articles/articles': '#partialArticles'}}) }}
+            
+            <div id="articleFilter" class="articleFilter">
+                <label>categories</label>
+                <br>
+                {% for category in categories %}
+                    <input type="checkbox" name="Filter[categories][]" value="{{ category.id }}" />
+                    <label>{{ category.category }}</label>
+                    <br>
+                {% endfor %}
+                {# {{ articles }} #}
+                <input type="reset" value="Reset">
+            </div> 
+            
+            {{ form_close() }}
+
+        </div>
+    </div>  
+    <div class="rightSection">
         
-        {% else %}
-            <li class="no-data">{{ noRecordsMessage }}</li>
-        {% endfor %}
-    </ul>
+        <div id="partialArticles" class="innerRightSection">
+       
+            {% partial 'articles/articles' detailsPage = detailsPage detailsUrlParameter = detailsUrlParameter detailsKeyColumn = detailsKeyColumn %}
+            
+        </div>
+    </div>  
 </div>
+{% else %}
+<h1>Nope! Yer nae logged in pal. </h1>
+{% endif %}

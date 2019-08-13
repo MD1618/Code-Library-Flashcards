@@ -27,7 +27,15 @@ class Category extends Model
     public $rules = [
     ];
 
-    public $hasMany = [
-        'articles' => 'martin\code\Models\Article'
+    // public $hasMany = [
+    //     'articles' => 'martin\code\Models\Article'
+    // ];
+
+    public $belongsToMany = [
+        'articles' => [
+            'martin\code\models\Article',
+            // 'table' => 'martin_code_pivot',
+            // 'order' => 'article'
+        ]
     ];
 }

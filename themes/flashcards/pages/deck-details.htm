@@ -13,7 +13,7 @@ notFoundMessage = "Record not found"
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
-
+{% if user %}
 {% if record %}
     {{ attribute(record, displayColumn) }}
      {% for card in record.cards %}
@@ -23,4 +23,7 @@ notFoundMessage = "Record not found"
      {% endfor %}
 {% else %}
     {{ notFoundMessage }}
+{% endif %}
+{% else %}
+<h1>Nope! Yer nae logged in pal. </h1>
 {% endif %}

@@ -1,4 +1,4 @@
-1565584290a:1:{s:16:"deck-details.htm";a:10:{s:8:"fileName";s:16:"deck-details.htm";s:7:"content";s:621:"title = "deck details"
+1565718819a:1:{s:16:"deck-details.htm";a:10:{s:8:"fileName";s:16:"deck-details.htm";s:7:"content";s:699:"title = "deck details"
 url = "/deck/:id"
 layout = "default"
 is_hidden = 0
@@ -13,7 +13,7 @@ notFoundMessage = "Record not found"
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
-
+{% if user %}
 {% if record %}
     {{ attribute(record, displayColumn) }}
      {% for card in record.cards %}
@@ -23,10 +23,13 @@ notFoundMessage = "Record not found"
      {% endfor %}
 {% else %}
     {{ notFoundMessage }}
-{% endif %}";s:5:"mtime";i:1565499785;s:6:"markup";s:362:"{% set record = builderDetails.record %}
+{% endif %}
+{% else %}
+<h1>Nope! Yer nae logged in pal. </h1>
+{% endif %}";s:5:"mtime";i:1565622789;s:6:"markup";s:440:"{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
-
+{% if user %}
 {% if record %}
     {{ attribute(record, displayColumn) }}
      {% for card in record.cards %}
@@ -36,4 +39,7 @@ notFoundMessage = "Record not found"
      {% endfor %}
 {% else %}
     {{ notFoundMessage }}
+{% endif %}
+{% else %}
+<h1>Nope! Yer nae logged in pal. </h1>
 {% endif %}";s:4:"code";N;s:5:"title";s:12:"deck details";s:3:"url";s:9:"/deck/:id";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:24:"Martin\Decks\Models\Deck";s:15:"identifierValue";s:9:"{{ :id }}";s:14:"modelKeyColumn";s:2:"id";s:13:"displayColumn";s:4:"name";s:15:"notFoundMessage";s:16:"Record not found";}}}

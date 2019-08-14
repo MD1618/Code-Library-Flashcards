@@ -1,4 +1,4 @@
-1565720036a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:2030:"==
+1565770299a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:2143:"==
 {##}
 <!-- Nav -->
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
@@ -16,15 +16,16 @@
         <div class="collapse navbar-collapse navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <li class="separator hidden-xs"></li>
-                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
+                {# <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li> #}
                 
                 {# <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">About</a></li> #}
 
                 {% if user %}
-                    <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'code'|page }}">Code</a></li>
-                    <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'decks'|page }}">Decks</a></li>
-                    <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Profile</a></li>
+                    <li class="{% if this.page.id == 'code' %}active{% endif %}"><a href="{{ 'code'|page }}">Code</a></li>
+                    <li class="{% if this.page.id == 'decks' %}active{% endif %}"><a href="{{ 'decks'|page }}">Decks</a></li>
+                    <li class="{% if this.page.id == 'profile' %}active{% endif %}"><a href="{{ 'login'|page }}">Profile</a></li>
                     <li><a data-request="onLogout" data-request-data="redirect: '/'">Sign out</a></li>
+                     <li ><a href="backend" target="_blank" rel="noopener noreferrer">Backend</a></li>
                 {% else %}
                    <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Login</a></li>
                 {% endif %}
@@ -33,7 +34,7 @@
             </ul>
         </div>
     </div>
-</nav>";s:5:"mtime";i:1565580788;s:6:"markup";s:2026:"{##}
+</nav>";s:5:"mtime";i:1565764613;s:6:"markup";s:2139:"{##}
 <!-- Nav -->
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
     <div class="container">
@@ -50,15 +51,16 @@
         <div class="collapse navbar-collapse navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <li class="separator hidden-xs"></li>
-                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
+                {# <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li> #}
                 
                 {# <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">About</a></li> #}
 
                 {% if user %}
-                    <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'code'|page }}">Code</a></li>
-                    <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'decks'|page }}">Decks</a></li>
-                    <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Profile</a></li>
+                    <li class="{% if this.page.id == 'code' %}active{% endif %}"><a href="{{ 'code'|page }}">Code</a></li>
+                    <li class="{% if this.page.id == 'decks' %}active{% endif %}"><a href="{{ 'decks'|page }}">Decks</a></li>
+                    <li class="{% if this.page.id == 'profile' %}active{% endif %}"><a href="{{ 'login'|page }}">Profile</a></li>
                     <li><a data-request="onLogout" data-request-data="redirect: '/'">Sign out</a></li>
+                     <li ><a href="backend" target="_blank" rel="noopener noreferrer">Backend</a></li>
                 {% else %}
                    <li class="{% if this.page.id == 'login' %}active{% endif %}"><a href="{{ 'login'|page }}">Login</a></li>
                 {% endif %}

@@ -7,14 +7,15 @@ fields:
         label: Description
         span: full
         type: text
-    content:
-        label: Content
-        size: ''
-        span: full
-        type: richeditor
     categories:
         label: Category
         span: auto
         nameFrom: category
         descriptionFrom: description
         type: relation
+    content:
+        label: Content
+        span: full
+        size: ''
+        mode: tab
+        type: markdown

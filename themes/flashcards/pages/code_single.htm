@@ -15,6 +15,9 @@ notFoundMessage = "Record not found"
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
 {% if user %}
+
+
+
 {% if record %}
     <h1>{{record.title|raw }}</h1>
     <h5>
@@ -24,7 +27,7 @@ notFoundMessage = "Record not found"
     </h5>
      <p>{{record.description|raw }}</p>
     <p>{{record.content|raw }}</p>
-    
+    <a href="/FlashCards/backend/martin/code/articles/update/{{ record.id }}">Edit</a>
 {% else %}
     {{ notFoundMessage }}
 {% endif %}

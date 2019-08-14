@@ -46,35 +46,41 @@ use martin\code\models\Article;
 ?>
 ==
 {##}
-{% if user %}
-
-
 {% component 'siteSearchInclude' %}
-<form action="{{ searchInput.searchPage | page }}?q={{ query | url_encode(true) }}" method="get">
-    <div class="ss-search-form">
-        <div class="ss-search-form__input">
-            <input name="q" type="text" placeholder="What are you looking for?" 
-                   value="{{ searchInput.query }}"
-                   autocomplete="off"
-                   autofocus
-                    {% if searchInput.useAutoComplete %}
-                        data-track-input
-                        data-request="{{ searchInput }}::onType"
-                        data-request-before-update="document.getElementById('autocomplete-results').classList.add('ss-search-form__results--visible')"
-                        data-request-update="'{{ searchInput }}::autocomplete': '#autocomplete-results'"
-                    {% endif %}
-            >
-            <button class="ss-search-form__submit" type="submit">Search</button>
-        </div>
-        <div class="ss-search-form__results" id="autocomplete-results"></div>
-    </div>
-</form>
-
-
-<h1>Code</h1>
+{% if user %}
 {% set articles = builderList.records %}
 {% set displayColumn = builderList.displayColumn %}
 {% set noRecordsMessage = builderList.noRecordsMessage %}
+
+
+<h3 >Code Notes</h3>
+
+<div style="position:relative;">
+    <div style="position:relative;right:0;margin-bottom:10px;">
+        <form action="{{ searchInput.searchPage | page }}?q={{ query | url_encode(true) }}" method="get">
+            <div class="ss-search-form">
+                <div class="ss-search-form__input">
+                    <input name="q" type="text" placeholder="Search..." 
+                        value="{{ searchInput.query }}"
+                        autocomplete="off"
+                        autofocus
+                            {% if searchInput.useAutoComplete %}
+                                data-track-input
+                                data-request="{{ searchInput }}::onType"
+                                data-request-before-update="document.getElementById('autocomplete-results').classList.add('ss-search-form__results--visible')"
+                                data-request-update="'{{ searchInput }}::autocomplete': '#autocomplete-results'"
+                            {% endif %}
+                    >
+                    <button class="ss-search-form__submit" type="submit">Go</button>
+                </div>
+                <div class="ss-search-form__results" id="autocomplete-results"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
 
 
 
@@ -85,15 +91,17 @@ use martin\code\models\Article;
             {{ form_ajax('onFilterArticles', { update: {'articles/articles': '#partialArticles'}}) }}
             
             <div id="articleFilter" class="articleFilter">
-                <label>categories</label>
+                <label>Tags</label>
                 <br>
                 {% for category in categories %}
+                <div class="tagDiv">
                     <input type="checkbox" name="Filter[categories][]" value="{{ category.id }}" />
                     <label>{{ category.category }}</label>
-                    <br>
+                   
+                </div> 
                 {% endfor %}
                 {# {{ articles }} #}
-                <input type="reset" value="Reset">
+                {# <input type="reset" value="Reset"> #}
             </div> 
             
             {{ form_close() }}

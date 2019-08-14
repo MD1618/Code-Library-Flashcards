@@ -136,4 +136,7 @@
   'OFFLINE\\SiteSearch\\Classes\\Providers\\VojtaSvobodaBrandsResultsProvider' => 'plugins\\offline\\sitesearch\\classes\\providers\\VojtaSvobodaBrandsResultsProvider.php',
   'OFFLINE\\SiteSearch\\Classes\\Providers\\GrakerPhotoAlbumsResultsProvider' => 'plugins\\offline\\sitesearch\\classes\\providers\\GrakerPhotoAlbumsResultsProvider.php',
   'OFFLINE\\SiteSearch\\Classes\\Result' => 'plugins\\offline\\sitesearch\\classes\\Result.php',
+  'samuell\\contenteditor\\Plugin' => 'plugins\\samuell\\contenteditor\\Plugin.php',
+  'Samuell\\ContentEditor\\Components\\ContentEditor' => 'plugins\\samuell\\contenteditor\\components\\ContentEditor.php',
+  'Samuell\\ContentEditor\\Models\\Settings' => 'plugins\\samuell\\contenteditor\\models\\Settings.php',
 );

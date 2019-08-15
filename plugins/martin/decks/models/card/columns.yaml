@@ -12,3 +12,9 @@ columns:
     deck_id:
         label: 'Deck ID'
         type: text
+    last_studied:
+        label: last_studied
+        type: text
+    next_study:
+        label: next_study
+        type: text

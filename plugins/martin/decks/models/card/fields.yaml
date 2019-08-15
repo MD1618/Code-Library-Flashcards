@@ -13,3 +13,13 @@ fields:
         nameFrom: name
         descriptionFrom: description
         type: relation
+    last_studied:
+        label: 'Last Studied'
+        mode: datetime
+        span: auto
+        type: datepicker
+    next_study:
+        label: 'Next Study'
+        span: auto
+        mode: datetime
+        type: datepicker

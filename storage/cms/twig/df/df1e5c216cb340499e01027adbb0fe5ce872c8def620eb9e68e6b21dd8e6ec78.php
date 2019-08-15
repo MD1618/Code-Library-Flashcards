@@ -106,8 +106,16 @@ class __TwigTemplate_5a32c173bd5773db70cb0d228cbddbb746739107521a7bdfdc446b395a3
         // line 37
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
-        ";
+        <script src=\"";
         // line 38
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
+        echo "\"></script>
+        ";
+        // line 39
+        echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
+        echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
+        // line 40
+        echo "        ";
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="'. Request::getBasePath()
@@ -122,15 +130,8 @@ class __TwigTemplate_5a32c173bd5773db70cb0d228cbddbb746739107521a7bdfdc446b395a3
         echo '<link rel="stylesheet" property="stylesheet" href="'. Request::getBasePath()
                     .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 39
-        echo "        ";
-        echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
-        echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 40
-        echo "        <script src=\"";
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
-        echo "\"></script>
-
+        // line 41
+        echo "
     </body>
 </html>";
     }
@@ -147,7 +148,7 @@ class __TwigTemplate_5a32c173bd5773db70cb0d228cbddbb746739107521a7bdfdc446b395a3
 
     public function getDebugInfo()
     {
-        return array (  130 => 40,  126 => 39,  111 => 38,  107 => 37,  103 => 36,  98 => 33,  94 => 32,  87 => 27,  85 => 26,  78 => 21,  74 => 20,  65 => 14,  61 => 13,  58 => 12,  55 => 11,  51 => 10,  47 => 9,  39 => 3,  35 => 2,);
+        return array (  134 => 41,  118 => 40,  115 => 39,  111 => 38,  107 => 37,  103 => 36,  98 => 33,  94 => 32,  87 => 27,  85 => 26,  78 => 21,  74 => 20,  65 => 14,  61 => 13,  58 => 12,  55 => 11,  51 => 10,  47 => 9,  39 => 3,  35 => 2,);
     }
 
     public function getSourceContext()
@@ -189,9 +190,9 @@ class __TwigTemplate_5a32c173bd5773db70cb0d228cbddbb746739107521a7bdfdc446b395a3
         <!-- Scripts -->
         <script src=\"{{ 'assets/vendor/jquery.js'|theme }}\"></script>
         <script src=\"{{ 'assets/vendor/bootstrap.js'|theme }}\"></script>
-        {% framework extras %}
-        {% scripts %}
         <script src=\"{{ 'assets/js/main.js'|theme }}\"></script>
+        {% scripts %}
+        {% framework extras %}
 
     </body>
 </html>", "C:\\xampp\\htdocs\\FlashCards/themes/flashcards/layouts/default.htm", "");

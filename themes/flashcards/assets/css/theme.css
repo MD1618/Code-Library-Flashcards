@@ -617,12 +617,19 @@ body {
 
 .rightSection {
     padding: 20px;
-    background: #dbdbdb;
+    /* background: #dbdbdb; */
     height: 1000px;
 }
 
 .tagDiv {
     display: block;
+}
+
+.deckDiv {
+    margin: 10px;
+    padding: 10px;
+    background: rgb(212, 212, 212);
+    border: 1px solid #666;
 }
 
 

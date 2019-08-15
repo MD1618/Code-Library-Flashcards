@@ -2,13 +2,13 @@ plugin:
     name: 'martin.decks::lang.plugin.name'
     description: 'martin.decks::lang.plugin.description'
     author: martin
-    icon: oc-icon-archive
+    icon: oc-icon-bars
     homepage: ''
 navigation:
     main-menu-item:
         label: Decks
         url: martin/decks/decks
-        icon: icon-life-ring
+        icon: icon-bars
         sideMenu:
             side-menu-item:
                 label: Cards

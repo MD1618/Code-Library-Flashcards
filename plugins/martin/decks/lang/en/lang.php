@@ -1,6 +1,6 @@
 <?php return [
     'plugin' => [
         'name' => 'Decks',
-        'description' => ''
+        'description' => 'Flash card deck plugin'
     ]
 ];

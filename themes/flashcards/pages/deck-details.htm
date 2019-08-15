@@ -13,17 +13,18 @@ notFoundMessage = "Record not found"
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
 {% if user %}
-{% if record %}
-    {{ attribute(record, displayColumn) }}
-     {% for card in record.cards %}
-        <p>{{card.front}}</p>
-
-
-     {% endfor %}
+            <h3>{{ attribute(record, displayColumn) }}</h3>
+    <div class="deckDiv" style="margin-top:20px;">
+        {% if record %}
+            <p>Cards: {{ record.cards|length}}</p>
+        
+        {% else %}
+            {{ notFoundMessage }}
+        {% endif %}
+    </div>
 {% else %}
-    {{ notFoundMessage }}
-{% endif %}
-{% else %}
-<h1>Nope! Yer nae logged in pal. </h1>
+    <h1>Nope! Yer nae logged in pal. </h1>
 {% endif %}

@@ -1,6 +1,6 @@
 <?php return [
     'plugin' => [
         'name' => 'Code',
-        'description' => ''
+        'description' => 'Code archive plugin for storing useful code articles'
     ]
 ];

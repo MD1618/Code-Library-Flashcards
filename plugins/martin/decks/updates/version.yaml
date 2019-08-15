@@ -39,3 +39,6 @@
 1.0.14:
     - 'Drop table martin_decks_pivot'
     - builder_table_delete_martin_decks_pivot.php
+1.0.15:
+    - 'Updated table martin_decks_cards'
+    - builder_table_update_martin_decks_cards_8.php

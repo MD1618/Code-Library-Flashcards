@@ -1,4 +1,4 @@
-1565942093a:1:{s:16:"deck-details.htm";a:10:{s:8:"fileName";s:16:"deck-details.htm";s:7:"content";s:1171:"title = "deck details"
+1565950065a:1:{s:16:"deck-details.htm";a:10:{s:8:"fileName";s:16:"deck-details.htm";s:7:"content";s:1171:"title = "deck details"
 url = "/deck/:id"
 layout = "default"
 is_hidden = 0

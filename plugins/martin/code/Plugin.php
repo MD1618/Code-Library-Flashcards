@@ -47,7 +47,7 @@ class Plugin extends PluginBase
         });
 
         return [
-            'provider' => 'Code Article', // The badge to display for this result
+            //'provider' => 'Code Article', // The badge to display for this result
             'results'  => $results,
         ];
     });

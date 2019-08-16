@@ -1,4 +1,4 @@
-1565851184a:1:{s:16:"deck-details.htm";a:10:{s:8:"fileName";s:16:"deck-details.htm";s:7:"content";s:791:"title = "deck details"
+1565942093a:1:{s:16:"deck-details.htm";a:10:{s:8:"fileName";s:16:"deck-details.htm";s:7:"content";s:1171:"title = "deck details"
 url = "/deck/:id"
 layout = "default"
 is_hidden = 0
@@ -10,6 +10,7 @@ modelKeyColumn = "id"
 displayColumn = "name"
 notFoundMessage = "Record not found"
 ==
+{##}
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
@@ -19,15 +20,24 @@ notFoundMessage = "Record not found"
             <h3>{{ attribute(record, displayColumn) }}</h3>
     <div class="deckDiv" style="margin-top:20px;">
         {% if record %}
-            <p>Cards: {{ record.cards|length}}</p>
-        
+            <p>Cards: {{ record.cards|length}} 
+                <br>
+            Last Studied: {{ record.last_studied }}</p>
+            
         {% else %}
             {{ notFoundMessage }}
         {% endif %}
     </div>
+
+    <div style="display:flex;justify-content:space-around;color:#222;">
+        <button onclick="location.href = '/FlashCards/studysr/{{ record.id }}';">Study Spaced Retrieval</button>
+        <button>Study Standard Flash Cards</button>
+        <button>Add New Cards</button>
+    </div>
 {% else %}
     <h1>Nope! Yer nae logged in pal. </h1>
-{% endif %}";s:5:"mtime";i:1565804392;s:6:"markup";s:532:"{% set record = builderDetails.record %}
+{% endif %}";s:5:"mtime";i:1565890299;s:6:"markup";s:912:"{##}
+{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
@@ -36,11 +46,19 @@ notFoundMessage = "Record not found"
             <h3>{{ attribute(record, displayColumn) }}</h3>
     <div class="deckDiv" style="margin-top:20px;">
         {% if record %}
-            <p>Cards: {{ record.cards|length}}</p>
-        
+            <p>Cards: {{ record.cards|length}} 
+                <br>
+            Last Studied: {{ record.last_studied }}</p>
+            
         {% else %}
             {{ notFoundMessage }}
         {% endif %}
+    </div>
+
+    <div style="display:flex;justify-content:space-around;color:#222;">
+        <button onclick="location.href = '/FlashCards/studysr/{{ record.id }}';">Study Spaced Retrieval</button>
+        <button>Study Standard Flash Cards</button>
+        <button>Add New Cards</button>
     </div>
 {% else %}
     <h1>Nope! Yer nae logged in pal. </h1>

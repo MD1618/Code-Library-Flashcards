@@ -32,7 +32,7 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 2
-        echo "<div class=\"\" style=\"display:grid;justify-content:space-evenly;\">
+        echo "<div class=\"\" style=\"display:grid;justify-content:space-evenly;margin-top:100px;\">
     <object style=\"width:200px;margin:10px;\" id=\"svgObjectLarge\" type=\"image/svg+xml\" data=\"";
         // line 3
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/svg/MDWDLogo2.3.svg");
@@ -58,7 +58,7 @@ class __TwigTemplate_d56d73574dc5580f01e7cfd1be26641da5c409d9bac2d2511be9d92ef4b
     public function getSourceContext()
     {
         return new Source("{##}
-<div class=\"\" style=\"display:grid;justify-content:space-evenly;\">
+<div class=\"\" style=\"display:grid;justify-content:space-evenly;margin-top:100px;\">
     <object style=\"width:200px;margin:10px;\" id=\"svgObjectLarge\" type=\"image/svg+xml\" data=\"{{ 'assets/svg/MDWDLogo2.3.svg'|theme }}\" class=\"logo\"></object>
 </div>", "C:\\xampp\\htdocs\\FlashCards/themes/flashcards/pages/home.htm", "");
     }

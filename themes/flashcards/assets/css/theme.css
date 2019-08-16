@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'lato';
     src: url('../fonts/lato-black-webfont.eot');
     src: url('../fonts/lato-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato-black-webfont.svg#latoblack') format('svg'), url('../fonts/lato-black-webfont.woff') format('woff'), url('../fonts/lato-black-webfont.ttf') format('truetype');
@@ -27,6 +27,13 @@
     src: url('../fonts/lato-light-webfont.eot');
     src: url('../fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato-light-webfont.svg#latolight') format('svg'), url('../fonts/lato-light-webfont.woff') format('woff'), url('../fonts/lato-light-webfont.ttf') format('truetype');
     font-weight: 300;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'Oxygen';
+    src: url('../fonts/Oxygen-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -592,7 +599,7 @@
 
 body {
     padding-top: 70px;
-    background: rgb(197, 197, 197);
+    color: #fff;
 }
 
 .gridContainer {
@@ -611,7 +618,7 @@ body {
 
 .leftSection {
     padding: 20px;
-    background: #c5c5c5;
+    background: #1f1f1f;
     height: 300px;
 }
 
@@ -628,8 +635,29 @@ body {
 .deckDiv {
     margin: 10px;
     padding: 10px;
-    background: rgb(212, 212, 212);
+    background: rgb(46, 46, 46);
     border: 1px solid #666;
+}
+
+.articleDiv {
+    border: 1px solid #666;
+    border-radius: 4px;
+    padding: 10px;
+    background: rgb(59, 59, 59);
+}
+
+.innerRightSection {
+    position: relative;
+}
+
+.card {
+    width: 100%;
+    display: none;
+    position: absolute;
+    border: 1px solid #666;
+    border-radius: 4px;
+    padding: 10px;
+    background: rgb(59, 59, 59);
 }
 
 
@@ -736,13 +764,14 @@ body {
 /*--------------------------*/
 
 .ss-search-form__submit {
-    background: #e2e2e2;
+    background: #4b4b4b;
     border: 2px solid #555;
+    color: #fff;
 }
 
 .ss-search-form__submit:hover {
     border: 2px solid rgb(0, 153, 255);
-    background: #e9e9e9;
+    background: #525252;
     transition: .5s;
 }
 
@@ -752,4 +781,8 @@ body {
 
 .active {
     font-size: 20px;
+}
+
+.ss-search-form__input {
+    color: #333;
 }

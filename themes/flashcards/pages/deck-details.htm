@@ -10,6 +10,7 @@ modelKeyColumn = "id"
 displayColumn = "name"
 notFoundMessage = "Record not found"
 ==
+{##}
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
@@ -19,11 +20,19 @@ notFoundMessage = "Record not found"
             <h3>{{ attribute(record, displayColumn) }}</h3>
     <div class="deckDiv" style="margin-top:20px;">
         {% if record %}
-            <p>Cards: {{ record.cards|length}}</p>
-        
+            <p>Cards: {{ record.cards|length}} 
+                <br>
+            Last Studied: {{ record.last_studied }}</p>
+            
         {% else %}
             {{ notFoundMessage }}
         {% endif %}
+    </div>
+
+    <div style="display:flex;justify-content:space-around;color:#222;">
+        <button onclick="location.href = '/FlashCards/studysr/{{ record.id }}';">Study Spaced Retrieval</button>
+        <button>Study Standard Flash Cards</button>
+        <button>Add New Cards</button>
     </div>
 {% else %}
     <h1>Nope! Yer nae logged in pal. </h1>

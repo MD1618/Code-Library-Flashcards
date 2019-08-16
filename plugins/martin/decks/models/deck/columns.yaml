@@ -4,3 +4,8 @@ columns:
         type: text
         searchable: true
         sortable: true
+    last_studied:
+        label: 'Last Studied'
+        type: datetime
+        searchable: true
+        sortable: true

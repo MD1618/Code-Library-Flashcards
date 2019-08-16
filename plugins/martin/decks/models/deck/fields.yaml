@@ -3,3 +3,8 @@ fields:
         label: Name
         span: full
         type: text
+    last_studied:
+        label: 'Last Studied'
+        span: auto
+        mode: datetime
+        type: datepicker

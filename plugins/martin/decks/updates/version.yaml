@@ -42,3 +42,6 @@
 1.0.15:
     - 'Updated table martin_decks_cards'
     - builder_table_update_martin_decks_cards_8.php
+1.0.16:
+    - 'Updated table martin_decks_'
+    - builder_table_update_martin_decks_.php

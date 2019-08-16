@@ -1,0 +1,61 @@
+title = "Study SR"
+url = "/studysr/:id"
+layout = "default"
+is_hidden = 0
+
+==
+<?php
+use martin\decks\models\Deck;
+use martin\decks\models\Card;
+
+    function onstart() {$this->prepareVars();}
+   
+
+    function prepareVars(){
+
+       
+
+        //$this['deck_id'] = $this->param('id');
+        
+        $this['deck'] = Deck::where('id','=', $this->param('id'))->first();
+        $this['cards'] = Card::where('deck_id','=', $this->param('id'))->get();
+
+
+    }
+?>
+==
+{##}
+
+<h2>study sr</h2>
+
+<div class="filterSection">
+    <div class="leftSection">
+        <div class="innerLeftSection">
+           
+          <h3>{{ deck.name }}</h3>
+           <button style="margin-bottom:5px;display:block;" onclick="changeCard();">Show Answer</button>
+           <button style="margin-bottom:5px;display:block;" onclick="difficultyRating('easy');">Easy</button>
+           <button style="margin-bottom:5px;display:block;" onclick="difficultyRating('ok');">Ok</button>
+           <button style="margin-bottom:5px;display:block;" onclick="difficultyRating('hard');">Hard</button>
+        </div>
+    </div>  
+    <div class="rightSection">
+        <div id="partialArticles" class="innerRightSection">
+             {% for card in cards %}
+                {% if loop.index == 1 %}
+                    <div class="card" style="display:block;">
+                    <h5 class="cardFront{{ loop.index }}" style="display:block;"><strong>Question:</strong><br><br>{{card.front}}</h5>
+                   
+                    <h5 class="cardBack{{ loop.index }}" style="display:none;"> <strong>Answer:</strong><br><br>{{card.back}}</h5>
+                    <br>
+                {% else %}
+                    <div class="card" >
+                    <h5 class="cardFront{{ loop.index }}" style="display:none;"><strong>Question:</strong><br><br>{{card.front}}</h5>
+                    <h5 class="cardBack{{ loop.index }}" style="display:none;"><strong>Answer:</strong><br><br>{{card.back}}</h5>
+                    <br>
+                {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>  
+</div>

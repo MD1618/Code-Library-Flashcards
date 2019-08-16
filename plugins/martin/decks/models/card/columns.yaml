@@ -15,6 +15,10 @@ columns:
     last_studied:
         label: last_studied
         type: text
+        searchable: true
+        sortable: true
     next_study:
         label: next_study
         type: text
+        searchable: true
+        sortable: true

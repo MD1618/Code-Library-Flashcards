@@ -40,7 +40,7 @@ pageNumber = "{{ :page }}"
                         </a>
                     {% endif %}
                     
-                     <p>Cards: {{ record.cards|length }}</p>
+                     <p>Cards: {{ record.cards|length}} <br>Last Studied: {{ record.last_studied }} <br> Cards to study today: --</p>
                     
                 {% endspaceless %}
             </div>

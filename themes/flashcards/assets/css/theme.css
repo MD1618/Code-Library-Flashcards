@@ -673,6 +673,14 @@ body {
     justify-content: space-around;
 }
 
+.buttonsRateDiv {
+    width: 100%;
+    position: absolute;
+    bottom: -100px;
+    display: flex;
+    justify-content: space-around;
+}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 

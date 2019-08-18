@@ -139,4 +139,5 @@
   'samuell\\contenteditor\\Plugin' => 'plugins\\samuell\\contenteditor\\Plugin.php',
   'Samuell\\ContentEditor\\Components\\ContentEditor' => 'plugins\\samuell\\contenteditor\\components\\ContentEditor.php',
   'Samuell\\ContentEditor\\Models\\Settings' => 'plugins\\samuell\\contenteditor\\models\\Settings.php',
+  'RainLab\\User\\Models\\MailBlocker' => 'plugins\\rainlab\\user\\models\\MailBlocker.php',
 );

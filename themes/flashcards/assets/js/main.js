@@ -2,7 +2,7 @@
 
     $('#articleFilter').on('change', 'input, select', function() {
 
-        var $form = $(this).closest('form');
+        var $form = $('#formCheckboxes');
         $form.request();
 
     });
@@ -15,6 +15,9 @@
 
 var currentCard = 1;
 
+//---------------------------------------------------------------------
+// Show Answer. Show current card
+//---------------------------------------------------------------------
 function showAnswer() {
 
     var cardbackCurrent = $('.cardBack' + (currentCard));
@@ -23,6 +26,10 @@ function showAnswer() {
 
 }
 
+
+//---------------------------------------------------------------------
+// Card change. Hide the previous card and show the current card
+//---------------------------------------------------------------------
 function changeCard() {
 
     currentCard++;

@@ -88,7 +88,7 @@ use martin\code\models\Article;
     <div class="leftSection">
         <div class="innerLeftSection">
 
-            {{ form_ajax('onFilterArticles', { update: {'articles/articles': '#partialArticles'}}) }}
+            {{ form_ajax('onFilterArticles', { update: {'articles/articles': '#partialArticles'},'id': 'formCheckboxes'}) }}
             
             <div id="articleFilter" class="articleFilter">
                 <label>Tags</label>

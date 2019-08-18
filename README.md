@@ -1,25 +1,14 @@
-# Installation wizard for October
+This web app is in progress.
 
-The wizard installation is a recommended way to install October. It is simpler than the command-line installation and doesn't require any special skills.
+Its purpose is to provide a library for any code or other relevant knowledge I use and want to store.
+It uses a tag system and search box for quick finding.
 
-1. Prepare a directory on your server that is empty. It can be a sub-directory, domain root or a sub-domain.
-1. [Download the installer archive file](https://github.com/octobercms/install/archive/master.zip).
-1. Unpack the installer archive to the prepared directory.
-1. Grant writing permissions on the installation directory and all its subdirectories and files.
-1. Navigate to the install.php script in your web browser.
-1. Follow the installation instructions.
+In addition there is a flashcard system being developed for studying those important hard to remember details.
+It will use both a standard flash card system and the Spacial Retrieval Method. A clever spacing system to make those neurons work harder. 
+https://en.wikipedia.org/wiki/Spaced_retrieval
 
-## Minimum System Requirements
 
-October CMS has a few system requirements:
+October CMS is at the heart of this project.
+https://octobercms.com/
 
-* PHP version 7.0 or higher
-* PDO PHP Extension
-* cURL PHP Extension
-* OpenSSL PHP Extension
-* Mbstring PHP Library
-* ZipArchive PHP Library
-* GD PHP Library
-
-As of PHP 5.5, some OS distributions may require you to manually install the PHP JSON extension.
-When using Ubuntu, this can be done via ``apt-get install php5-json``.
+It is a great Laravel based CMS.

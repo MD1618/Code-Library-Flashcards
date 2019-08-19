@@ -676,8 +676,8 @@ body {
 .buttonsRateDiv {
     width: 100%;
     position: absolute;
-    bottom: -100px;
-    display: flex;
+    bottom: -50px;
+    display: none;
     justify-content: space-around;
 }
 

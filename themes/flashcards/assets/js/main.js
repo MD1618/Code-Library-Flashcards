@@ -24,6 +24,9 @@ function showAnswer() {
 
     cardbackCurrent[0].style.display = "block";
 
+    $('#showButton').css("display", "none");
+    $('#rateButtons').css("display", "flex");
+
 }
 
 
@@ -31,7 +34,8 @@ function showAnswer() {
 // Card change. Hide the previous card and show the current card
 //---------------------------------------------------------------------
 function changeCard() {
-
+    $('#showButton').css("display", "flex");
+    $('#rateButtons').css("display", "none");
     currentCard++;
     var cards = $('.card');
     var cardCount = parseInt(cards.length);
